@@ -1,0 +1,438 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Virelix - Custom URL Shortener & Analytics Platform" description="Paste long URLs, generate custom branded aliases, track real-time click statistics, and output custom QR codes with Virelix.">
+	<Header />
+
+	<main class="service-detail-page">
+		<!-- Back Button & Breadcrumb -->
+		<section class="breadcrumb-section">
+			<div class="container">
+				<a href="/#services" class="back-link">
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+					Back to Services
+				</a>
+			</div>
+		</section>
+
+		<!-- Hero Detail Grid -->
+		<section class="detail-hero-section">
+			<div class="container detail-hero-container">
+				<div class="detail-hero-content">
+					<div class="detail-badge green">
+						<span class="badge-dot green-dot"></span>
+						API Shortener Tool
+					</div>
+					<h1 class="detail-title">Virelix</h1>
+					<p class="detail-tagline">Paste long URLs, define branded custom aliases, track granular visitor metrics, and output instant QR codes under a modern dashboard.</p>
+					
+					<div class="detail-ctas">
+						<a href="#selfhost" class="btn btn-primary">
+							Self-Host Guide
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="5 12 12 19 19 12"></polyline></svg>
+						</a>
+						<a href="#features" class="btn btn-secondary">Key Features</a>
+					</div>
+				</div>
+
+				<div class="detail-hero-image-wrapper">
+					<div class="image-frame-container">
+						<img src="/virelix-preview.png" alt="Virelix Analytics Dashboard UI" class="preview-image desktop-mockup" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Grid -->
+		<section class="detail-features-section" id="features">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Engineered Utilities</h2>
+				<div class="features-detail-grid">
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon alias-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+						</div>
+						<h3>Custom Branded Aliases</h3>
+						<p>Ditch random alphanumeric suffixes. Craft recognizable short links like <code>virelix.io/autumn-sale</code> to improve click rates.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon chart-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+						</div>
+						<h3>Granular Analytics</h3>
+						<p>Track totals, geographic distribution, referral channels, user agents, and click timestamps in real-time charts.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon qr-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+						</div>
+						<h3>QR Code Generators</h3>
+						<p>Instantly render high-resolution QR codes for physical marketing, complete with color options and download capabilities.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Docker Self-Host Guide -->
+		<section class="integration-section" id="selfhost">
+			<div class="container integration-container glass-card">
+				<div class="integration-content">
+					<h2>Self-Host with Docker Compose</h2>
+					<p class="integration-summary">Host Virelix URL Shortener securely on your own server. We provide a pre-packaged Docker configuration with built-in Redis analytics caching.</p>
+					
+					<div class="steps-list">
+						<div class="step-item">
+							<span class="step-number">1</span>
+							<div class="step-text">
+								<h4>Create Compose File</h4>
+								<p>Save the following configurations as <code>docker-compose.yml</code> on your server.</p>
+								<div class="code-block-wrapper">
+									<pre><code>version: '3.8'
+
+services:
+  virelix-api:
+    image: dting/virelix:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_URL=redis://redis-db:6379/0
+      - BASE_URL=https://virelix.io
+    depends_on:
+      - redis-db
+
+  redis-db:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">2</span>
+							<div class="step-text">
+								<h4>Launch Containers</h4>
+								<p>Boot up the services in detached mode to run the local API gateway server.</p>
+								<div class="code-block-wrapper">
+									<pre><code>docker-compose up -d</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">3</span>
+							<div class="step-text">
+								<h4>Access Dashboard</h4>
+								<p>Open your browser and navigate to <code>http://localhost:8000/dashboard</code> to shorten your first link.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	/* Common styles matching pocketpay.astro */
+	.service-detail-page {
+		padding-top: var(--header-height);
+		flex-grow: 1;
+	}
+
+	.breadcrumb-section {
+		padding: 2rem 0 1rem 0;
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--text-secondary);
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.back-link:hover {
+		color: var(--text-primary);
+		transform: translateX(-3px);
+	}
+
+	/* Hero Detail Section */
+	.detail-hero-section {
+		padding: 2rem 0 5rem 0;
+	}
+
+	.detail-hero-container {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.detail-hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.detail-badge {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 1rem;
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		font-family: var(--font-heading);
+	}
+
+	.detail-badge.green {
+		background: rgba(16, 185, 129, 0.08);
+		border: 1px solid rgba(16, 185, 129, 0.2);
+		color: #10b981;
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+	}
+
+	.green-dot {
+		background-color: #10b981;
+		box-shadow: 0 0 8px #10b981;
+	}
+
+	.detail-title {
+		font-size: 4rem;
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+
+	.detail-tagline {
+		color: var(--text-secondary);
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.detail-ctas {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	/* Image display */
+	.detail-hero-image-wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.image-frame-container {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 12px;
+		padding: 6px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+	}
+
+	.preview-image {
+		border-radius: 8px;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+
+	/* Features section */
+	.detail-features-section {
+		padding: 5rem 0;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.detail-section-title {
+		font-size: 2.25rem;
+		margin-bottom: 3.5rem;
+	}
+
+	.features-detail-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.feat-detail-card {
+		padding: 3rem 2.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.feat-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.alias-icon { color: #10b981; border-color: rgba(16, 185, 129, 0.2); }
+	.chart-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.qr-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+
+	.feat-detail-card h3 {
+		font-size: 1.35rem;
+		font-weight: 600;
+	}
+
+	.feat-detail-card p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Integration / Local setup section */
+	.integration-section {
+		padding: 6rem 0 8rem 0;
+	}
+
+	.integration-container {
+		padding: 5rem 4.5rem;
+		border: 1px solid rgba(16, 185, 129, 0.15);
+	}
+
+	.integration-content {
+		max-width: 800px;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.integration-content h2 {
+		font-size: 2.25rem;
+	}
+
+	.integration-summary {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+	}
+
+	.steps-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.step-item {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.step-number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: rgba(16, 185, 129, 0.1);
+		border: 1px solid rgba(16, 185, 129, 0.3);
+		color: #10b981;
+		font-family: var(--font-heading);
+		font-weight: bold;
+		font-size: 0.95rem;
+	}
+
+	.step-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		flex-grow: 1;
+	}
+
+	.step-text h4 {
+		font-size: 1.15rem;
+		font-weight: 600;
+	}
+
+	.step-text p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	/* Code Block styling */
+	.code-block-wrapper {
+		background: rgba(7, 9, 14, 0.6);
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		padding: 0.85rem 1.25rem;
+		margin-top: 0.5rem;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	.code-block-wrapper pre {
+		margin: 0;
+	}
+
+	.code-block-wrapper code {
+		font-family: 'Courier New', Courier, monospace;
+		color: #e2e8f0;
+		font-size: 0.9rem;
+	}
+
+	/* Responsive Breakpoints */
+	@media (max-width: 992px) {
+		.detail-hero-container {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 4rem;
+		}
+
+		.detail-badge {
+			align-self: center;
+		}
+
+		.detail-ctas {
+			justify-content: center;
+		}
+
+		.features-detail-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.integration-container {
+			padding: 4rem 2.5rem;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.detail-title {
+			font-size: 3rem;
+		}
+	}
+</style>

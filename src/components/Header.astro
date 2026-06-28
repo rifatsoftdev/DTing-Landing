@@ -1,0 +1,298 @@
+---
+---
+
+<header class="header" id="main-header">
+	<div class="container header-container">
+		<!-- Logo -->
+		<a href="/" class="logo">
+			<span class="logo-text text-gradient">DTing</span>
+		</a>
+
+		<!-- Desktop Navigation -->
+		<nav class="desktop-nav">
+			<ul class="nav-links">
+				<li><a href="/#about">About</a></li>
+				<li><a href="/#services">Services</a></li>
+				<li><a href="/#features">Features</a></li>
+				<li><a href="/#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Desktop CTA -->
+		<div class="header-actions">
+			<a href="https://auth.dting.online/login" class="btn btn-outline-glow btn-sm" target="_blank" rel="noopener noreferrer">
+				Launch Console
+			</a>
+			<!-- Mobile Hamburger -->
+			<button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+				<span class="bar bar-1"></span>
+				<span class="bar bar-2"></span>
+				<span class="bar bar-3"></span>
+			</button>
+		</div>
+	</div>
+
+	<!-- Mobile Menu Overlay -->
+	<div class="mobile-menu" id="mobile-menu">
+		<nav class="mobile-nav">
+			<ul class="mobile-links">
+				<li><a href="/#about" class="mobile-link">About</a></li>
+				<li><a href="/#services" class="mobile-link">Services</a></li>
+				<li><a href="/#features" class="mobile-link">Features</a></li>
+				<li><a href="/#contact" class="mobile-link">Contact</a></li>
+			</ul>
+			<div class="mobile-actions">
+				<a href="https://auth.dting.online/login" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+					Launch Console
+				</a>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<script>
+	const header = document.getElementById('main-header');
+	const mobileToggle = document.getElementById('mobile-toggle');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const mobileLinks = document.querySelectorAll('.mobile-link');
+
+	// Scroll effect for header
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 20) {
+			header?.classList.add('scrolled');
+		} else {
+			header?.classList.remove('scrolled');
+		}
+	});
+
+	// Toggle mobile menu
+	function toggleMenu() {
+		mobileToggle?.classList.toggle('active');
+		mobileMenu?.classList.toggle('active');
+		document.body.classList.toggle('no-scroll');
+	}
+
+	mobileToggle?.addEventListener('click', toggleMenu);
+
+	// Close menu when clicking a link
+	mobileLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			if (mobileMenu?.classList.contains('active')) {
+				toggleMenu();
+			}
+		});
+	});
+</script>
+
+<style>
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--header-height);
+		z-index: 100;
+		transition: all 0.4s ease;
+		display: flex;
+		align-items: center;
+		border-bottom: 1px solid transparent;
+		background: rgba(7, 9, 14, 0);
+	}
+
+	.header.scrolled {
+		background: rgba(7, 9, 14, 0.75);
+		backdrop-filter: blur(15px);
+		-webkit-backdrop-filter: blur(15px);
+		border-bottom: 1px solid var(--border-color);
+		height: 70px;
+	}
+
+	.header-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	/* Logo */
+	.logo {
+		display: flex;
+		align-items: center;
+		z-index: 101;
+	}
+
+	.logo-text {
+		font-family: var(--font-heading);
+		font-weight: 800;
+		font-size: 1.8rem;
+		letter-spacing: -0.03em;
+		background: var(--grad-primary);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	/* Desktop Navigation */
+	.desktop-nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2.25rem;
+	}
+
+	.nav-links a {
+		font-family: var(--font-heading);
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--text-secondary);
+		position: relative;
+		padding: 0.25rem 0;
+	}
+
+	.nav-links a::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: var(--grad-primary);
+		transition: width 0.3s ease;
+		border-radius: 2px;
+	}
+
+	.nav-links a:hover {
+		color: var(--text-primary);
+	}
+
+	.nav-links a:hover::after {
+		width: 100%;
+	}
+
+	/* Header Actions */
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+	}
+
+	.btn-sm {
+		padding: 0.5rem 1.25rem;
+		font-size: 0.85rem;
+	}
+
+	/* Mobile Toggle Button */
+	.mobile-toggle {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 24px;
+		height: 16px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		z-index: 101;
+		padding: 0;
+	}
+
+	.bar {
+		width: 100%;
+		height: 2px;
+		background-color: var(--text-primary);
+		transition: all 0.3s ease;
+		transform-origin: left center;
+		border-radius: 1px;
+	}
+
+	.mobile-toggle.active .bar-1 {
+		transform: rotate(45deg) translateY(-2px);
+	}
+
+	.mobile-toggle.active .bar-2 {
+		opacity: 0;
+		width: 0;
+	}
+
+	.mobile-toggle.active .bar-3 {
+		transform: rotate(-45deg) translateY(2px);
+	}
+
+	/* Mobile Menu */
+	.mobile-menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100vh;
+		background: rgba(7, 9, 14, 0.98);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		z-index: 99;
+		transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.mobile-menu.active {
+		right: 0;
+	}
+
+	.mobile-nav {
+		width: 100%;
+		padding: 3rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+	}
+
+	.mobile-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		width: 100%;
+	}
+
+	.mobile-links a {
+		font-family: var(--font-heading);
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+	}
+
+	.mobile-links a:hover {
+		color: var(--text-primary);
+	}
+
+	.mobile-actions {
+		width: 100%;
+		max-width: 250px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Prevent scrolling when menu is active */
+	:global(body.no-scroll) {
+		overflow: hidden;
+	}
+
+	/* Responsive Breakpoints */
+	@media (max-width: 768px) {
+		.desktop-nav {
+			display: none;
+		}
+
+		.mobile-toggle {
+			display: flex;
+		}
+		
+		.header-actions .btn-outline-glow {
+			display: none;
+		}
+	}
+</style>

@@ -1,0 +1,875 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="DTing - Next-Generation Developer Infrastructure & Utilities">
+	<Header />
+
+	<main>
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="container hero-container">
+				<div class="hero-content">
+					<div class="hero-badge">
+						<span class="badge-dot"></span>
+						Next Generation Technology Platform
+					</div>
+					<h1 class="hero-title">
+						Build The Future <br />
+						With <span class="text-gradient">DTing</span>
+					</h1>
+					<p class="hero-subtitle">
+						Secure Authentication, Cloud APIs, Real-Time Communication and Modern Developer Infrastructure. Empowering you to build products faster and smarter.
+					</p>
+					<div class="hero-actions">
+						<a href="https://auth.dting.online/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+							Get Started
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+						</a>
+						<a href="#services" class="btn btn-secondary">
+							Explore Services
+						</a>
+					</div>
+				</div>
+
+				<!-- Floating Interactive Dashboard Graphic -->
+				<div class="hero-graphic float-element">
+					<div class="glass-card console-card">
+						<div class="console-header">
+							<div class="console-dots">
+								<span class="dot dot-red"></span>
+								<span class="dot dot-yellow"></span>
+								<span class="dot dot-green"></span>
+							</div>
+							<div class="console-title">platform-overview.sh</div>
+						</div>
+						<div class="console-body">
+							<div class="console-line">
+								<span class="console-prompt">$</span> <span class="text-secondary">dting status --all</span>
+							</div>
+							<div class="console-line text-success">
+								✔ Core Authentication Services online [200 OK]
+							</div>
+							<div class="console-line text-success">
+								✔ Cloud APIs gateway responding [12ms]
+							</div>
+							<div class="console-line text-success">
+								✔ Real-Time Chat Infrastructure active
+							</div>
+							<div class="console-line text-cyan">
+								ℹ Active Services Loaded: 4 core apps
+							</div>
+							<div class="console-separator"></div>
+							
+							<div class="status-charts">
+								<div class="chart-item">
+									<div class="chart-label">CPU</div>
+									<svg viewBox="0 0 36 36" class="circular-chart cyan">
+										<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<path class="circle" stroke-dasharray="24, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<text x="18" y="20.35" class="percentage">24%</text>
+									</svg>
+								</div>
+								<div class="chart-item">
+									<div class="chart-label">RAM</div>
+									<svg viewBox="0 0 36 36" class="circular-chart purple">
+										<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<path class="circle" stroke-dasharray="48, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<text x="18" y="20.35" class="percentage">48%</text>
+									</svg>
+								</div>
+								<div class="chart-item">
+									<div class="chart-label">API</div>
+									<svg viewBox="0 0 36 36" class="circular-chart pink">
+										<path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<path class="circle" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+										<text x="18" y="20.35" class="percentage">99%</text>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Stats Section -->
+		<section class="stats-section">
+			<div class="container stats-container">
+				<div class="stat-card glass-card">
+					<h3 class="stat-number text-gradient">99.9%</h3>
+					<p class="stat-title">Platform Reliability</p>
+					<p class="stat-desc">Guaranteed uptime with distributed servers.</p>
+				</div>
+				<div class="stat-card glass-card">
+					<h3 class="stat-number text-gradient-purple">24/7</h3>
+					<p class="stat-title">Live Availability</p>
+					<p class="stat-desc">Services available anytime, anywhere.</p>
+				</div>
+				<div class="stat-card glass-card">
+					<h3 class="stat-number text-gradient">10K+</h3>
+					<p class="stat-title">Developer Accounts</p>
+					<p class="stat-desc">Trusted by builders and small teams.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section class="about-section" id="about">
+			<div class="container about-container">
+				<div class="section-header text-center">
+					<h2 class="section-title">Who is <span class="text-gradient">DTing</span>?</h2>
+					<p class="section-subtitle">Empowering developers and businesses with cutting-edge tools.</p>
+				</div>
+				<div class="about-grid">
+					<div class="about-text-block">
+						<p>
+							DTing is a comprehensive next-generation platform developed to address complex requirements in secure finance tracking, digital image utilities, fast custom URL generation, and end-to-end encrypted chats.
+						</p>
+						<p>
+							We believe in building utilities that are fast, modern, and highly responsive. Many of our tools operate strictly on client-side sandboxes ensuring maximum data privacy, while our cloud products leverage highly scalable node architectures.
+						</p>
+					</div>
+					<div class="about-features">
+						<div class="about-feat-item">
+							<div class="feat-icon-wrapper cyan">
+								<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+							</div>
+							<div>
+								<h4 class="feat-title">Privacy Focused</h4>
+								<p class="feat-desc">Your file manipulation and private data stay securely in your device.</p>
+							</div>
+						</div>
+						<div class="about-feat-item">
+							<div class="feat-icon-wrapper purple">
+								<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+							</div>
+							<div>
+								<h4 class="feat-title">High Speed Outputs</h4>
+								<p class="feat-desc">Optimized pipelines that load instantly and respond in milliseconds.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="services-section" id="services">
+			<div class="container">
+				<div class="section-header text-center">
+					<h2 class="section-title">Our Ecosystem & <span class="text-gradient">Services</span></h2>
+					<p class="section-subtitle">A collection of custom applications engineered for seamless daily utility.</p>
+				</div>
+
+				<div class="services-grid">
+					<!-- PocketPay Card -->
+					<div class="service-card glass-card">
+						<div class="service-icon-wrapper finance">
+							<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+						</div>
+						<h3 class="service-card-title">PocketPay</h3>
+						<p class="service-card-desc">
+							A premium mobile finance tracking and peer-to-peer transaction platform. Send, request, and manage funds in real-time.
+						</p>
+						<div class="service-card-footer">
+							<span class="service-tag">Finance</span>
+							<a href="/services/pocketpay" class="service-link">
+								Explore
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Image Toolkit Card -->
+					<div class="service-card glass-card">
+						<div class="service-icon-wrapper toolkit">
+							<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 8V16"></path><path d="M8 12H16"></path></svg>
+						</div>
+						<h3 class="service-card-title">Image Toolkit</h3>
+						<p class="service-card-desc">
+							Complete client-side operations: compress, crop, resize, rotate, and convert formats with absolute safety in your browser.
+						</p>
+						<div class="service-card-footer">
+							<span class="service-tag">Images</span>
+							<a href="/services/toolkit" class="service-link">
+								Explore
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Virelix Card -->
+					<div class="service-card glass-card">
+						<div class="service-icon-wrapper virelix">
+							<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+						</div>
+						<h3 class="service-card-title">Virelix URL Shortener</h3>
+						<p class="service-card-desc">
+							Generate short custom aliases, track granular user click analytics, generate QR codes, and run bulk links compression.
+						</p>
+						<div class="service-card-footer">
+							<span class="service-tag">API Tool</span>
+							<a href="/services/virelix" class="service-link">
+								Explore
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- DTalk Card -->
+					<div class="service-card glass-card">
+						<div class="service-icon-wrapper dtalk">
+							<svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+						</div>
+						<h3 class="service-card-title">DTalk Messenger</h3>
+						<p class="service-card-desc">
+							Next-generation real-time messenger featuring customizable server channels, encrypted DM support, and lightning-fast file exchanges.
+						</p>
+						<div class="service-card-footer">
+							<span class="service-tag">Chat</span>
+							<a href="/services/dtalk" class="service-link">
+								Explore
+								<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features-section" id="features">
+			<div class="container">
+				<div class="section-header text-center">
+					<h2 class="section-title">Engineered for <span class="text-gradient">Scale</span> & Speed</h2>
+					<p class="section-subtitle">Under the hood of our next-generation developer tooling ecosystem.</p>
+				</div>
+
+				<div class="features-grid">
+					<div class="feature-item glass-card">
+						<div class="feat-icon-box">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+						</div>
+						<h3>JWT Security & Auth</h3>
+						<p>Utilize robust tokenization to secure APIs, custom channels, and local-to-cloud connections securely.</p>
+					</div>
+
+					<div class="feature-item glass-card">
+						<div class="feat-icon-box">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+						</div>
+						<h3>Redis Ledgers</h3>
+						<p>Rate limit and cache active API calls, ensuring high availability, sub-millisecond response latency, and low cost.</p>
+					</div>
+
+					<div class="feature-item glass-card">
+						<div class="feat-icon-box">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+						</div>
+						<h3>Dockerized Deployment</h3>
+						<p>Every server-side service compiles and launches under clean micro-service container files, easily deployable to AWS or VPS.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Call To Action (CTA) Section -->
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-box">
+					<div class="cta-content">
+						<h2>Ready to Build Something Amazing?</h2>
+						<p>Create your free developer account today and tap into our robust API clusters, tools, and live communications infrastructure.</p>
+					</div>
+					<div class="cta-button-wrapper">
+						<a href="https://auth.dting.online/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+							Launch Platform Console
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		flex-grow: 1;
+		padding-top: var(--header-height);
+	}
+
+	/* Hero Section */
+	.hero-section {
+		padding: 5rem 0 3rem 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-container {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.hero-badge {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 1rem;
+		border-radius: 50px;
+		background: rgba(0, 242, 254, 0.08);
+		border: 1px solid rgba(0, 242, 254, 0.2);
+		color: var(--accent-cyan);
+		font-size: 0.85rem;
+		font-weight: 600;
+		font-family: var(--font-heading);
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--accent-cyan);
+		box-shadow: 0 0 8px var(--accent-cyan);
+	}
+
+	.hero-title {
+		font-size: 3.75rem;
+		font-weight: 800;
+		line-height: 1.15;
+		letter-spacing: -0.03em;
+	}
+
+	.hero-subtitle {
+		color: var(--text-secondary);
+		font-size: 1.15rem;
+		line-height: 1.6;
+		max-width: 520px;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	/* Console Widget Graphic */
+	.hero-graphic {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.console-card {
+		width: 100%;
+		max-width: 440px;
+		border-radius: 12px;
+		overflow: hidden;
+		border: 1px solid rgba(255, 255, 255, 0.08);
+		box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+	}
+
+	.console-header {
+		background: rgba(255, 255, 255, 0.02);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+		padding: 0.75rem 1.25rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.console-dots {
+		display: flex;
+		gap: 0.4rem;
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+	.dot-red { background-color: #ff5f56; }
+	.dot-yellow { background-color: #ffbd2e; }
+	.dot-green { background-color: #27c93f; }
+
+	.console-title {
+		font-family: monospace;
+		font-size: 0.8rem;
+		color: var(--text-muted);
+	}
+
+	.console-body {
+		padding: 1.5rem;
+		font-family: 'Courier New', Courier, monospace;
+		font-size: 0.85rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		background: rgba(7, 9, 14, 0.4);
+	}
+
+	.console-prompt {
+		color: var(--accent-pink);
+		font-weight: bold;
+	}
+
+	.text-success { color: #4ade80; }
+	.text-cyan { color: var(--accent-cyan); }
+	
+	.console-separator {
+		height: 1px;
+		background: rgba(255, 255, 255, 0.05);
+		margin: 0.5rem 0;
+	}
+
+	.status-charts {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	.chart-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.chart-label {
+		font-size: 0.75rem;
+		color: var(--text-secondary);
+		font-weight: 600;
+	}
+
+	/* Circular Chart */
+	.circular-chart {
+		display: block;
+		margin: 0 auto;
+		max-width: 60px;
+		max-height: 60px;
+	}
+
+	.circle-bg {
+		fill: none;
+		stroke: rgba(255, 255, 255, 0.05);
+		stroke-width: 3.5;
+	}
+
+	.circle {
+		fill: none;
+		stroke-width: 3.5;
+		stroke-linecap: round;
+		transition: stroke-dasharray 0.3s ease;
+	}
+
+	.cyan .circle { stroke: var(--accent-cyan); }
+	.purple .circle { stroke: var(--accent-purple); }
+	.pink .circle { stroke: var(--accent-pink); }
+
+	.percentage {
+		fill: #fff;
+		font-family: sans-serif;
+		font-size: 8px;
+		font-weight: bold;
+		text-anchor: middle;
+	}
+
+	/* Stats Section */
+	.stats-section {
+		padding: 3rem 0;
+	}
+
+	.stats-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.stat-card {
+		padding: 2.25rem 2rem;
+		text-align: center;
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 1;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-title {
+		font-family: var(--font-heading);
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-desc {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+	}
+
+	/* About Section */
+	.about-section {
+		padding: 6rem 0;
+	}
+
+	.section-header {
+		margin-bottom: 4rem;
+	}
+
+	.section-title {
+		font-size: 2.5rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.section-subtitle {
+		font-size: 1.1rem;
+		color: var(--text-secondary);
+	}
+
+	.text-center {
+		text-align: center;
+	}
+
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-text-block {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		line-height: 1.7;
+	}
+
+	.about-features {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.about-feat-item {
+		display: flex;
+		gap: 1.25rem;
+	}
+
+	.feat-icon-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 48px;
+		height: 48px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid var(--border-color);
+	}
+
+	.feat-icon-wrapper.cyan {
+		color: var(--accent-cyan);
+		border-color: rgba(0, 242, 254, 0.15);
+	}
+
+	.feat-icon-wrapper.purple {
+		color: var(--accent-purple);
+		border-color: rgba(127, 0, 255, 0.15);
+	}
+
+	.feat-title {
+		font-size: 1.15rem;
+		font-weight: 600;
+		margin-bottom: 0.25rem;
+	}
+
+	.feat-desc {
+		font-size: 0.95rem;
+		color: var(--text-secondary);
+	}
+
+	/* Services Section */
+	.services-section {
+		padding: 6rem 0;
+		position: relative;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.service-card {
+		padding: 3rem 2.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.service-icon-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 16px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.service-icon-wrapper.finance {
+		color: var(--accent-purple);
+		border-color: rgba(127, 0, 255, 0.2);
+	}
+	.service-icon-wrapper.toolkit {
+		color: var(--accent-cyan);
+		border-color: rgba(0, 242, 254, 0.2);
+	}
+	.service-icon-wrapper.virelix {
+		color: #10b981;
+		border-color: rgba(16, 185, 129, 0.2);
+	}
+	.service-icon-wrapper.dtalk {
+		color: var(--accent-pink);
+		border-color: rgba(243, 85, 136, 0.2);
+	}
+
+	.service-card-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	.service-card-desc {
+		color: var(--text-secondary);
+		font-size: 1rem;
+		line-height: 1.6;
+		flex-grow: 1;
+	}
+
+	.service-card-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 1.5rem;
+		border-top: 1px solid var(--border-color);
+		padding-top: 1.25rem;
+	}
+
+	.service-tag {
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--text-muted);
+	}
+
+	.service-link {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-family: var(--font-heading);
+		font-weight: 600;
+		color: var(--text-primary);
+		font-size: 0.95rem;
+	}
+
+	.service-link svg {
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover .service-link svg {
+		transform: translateX(4px);
+	}
+
+	.service-card:hover .service-link {
+		color: var(--accent-cyan);
+	}
+
+	/* Features Section */
+	.features-section {
+		padding: 6rem 0;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.feature-item {
+		padding: 2.5rem 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.feat-icon-box {
+		color: var(--accent-cyan);
+	}
+
+	.feature-item h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.feature-item p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* CTA Section */
+	.cta-section {
+		padding: 6rem 0 8rem 0;
+	}
+
+	.cta-box {
+		background: linear-gradient(135deg, rgba(127, 0, 255, 0.95) 0%, rgba(0, 242, 254, 0.9) 100%);
+		border-radius: 24px;
+		padding: 5rem 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3rem;
+		box-shadow: 0 20px 50px -10px rgba(0, 242, 254, 0.3);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cta-box::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: 
+			linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+		background-size: 30px 30px;
+		pointer-events: none;
+	}
+
+	.cta-content {
+		max-width: 550px;
+		z-index: 2;
+	}
+
+	.cta-content h2 {
+		font-size: 2.5rem;
+		font-weight: 800;
+		color: #ffffff;
+		margin-bottom: 1rem;
+		letter-spacing: -0.02em;
+	}
+
+	.cta-content p {
+		color: rgba(255, 255, 255, 0.85);
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	.cta-button-wrapper {
+		z-index: 2;
+	}
+
+	.btn-lg {
+		padding: 1rem 2.25rem;
+		font-size: 1.05rem;
+		background: #ffffff;
+		color: #07090e;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+	}
+
+	.btn-lg:hover {
+		background: rgba(255, 255, 255, 0.9);
+		transform: translateY(-3px);
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+	}
+
+	/* Responsive Breakpoints */
+	@media (max-width: 992px) {
+		.hero-container {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 4rem;
+		}
+
+		.hero-badge {
+			align-self: center;
+		}
+
+		.hero-subtitle {
+			margin: 0 auto;
+		}
+
+		.hero-actions {
+			justify-content: center;
+		}
+
+		.hero-graphic {
+			order: -1;
+		}
+
+		.about-grid {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.features-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.cta-box {
+			flex-direction: column;
+			text-align: center;
+			padding: 4rem 3rem;
+			gap: 2.5rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.75rem;
+		}
+
+		.stats-container {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.features-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.cta-content h2 {
+			font-size: 2rem;
+		}
+	}
+</style>
