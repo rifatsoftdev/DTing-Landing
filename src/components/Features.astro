@@ -1,0 +1,374 @@
+---
+---
+
+
+<!-- Features Section -->
+<section class="features-section" id="features">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-eyebrow">Core Technology</span>
+            <h2 class="section-title">Engineered for <span class="text-gradient">Scale</span> & Speed</h2>
+            <p class="section-subtitle">Under the hood of our next-generation developer tooling ecosystem built for enterprise workloads.</p>
+        </div>
+
+        <div class="features-wrapper">
+            <div class="features-grid">
+                <div class="feature-item glass-card" style="--accent: var(--accent-cyan);">
+                    <div class="feature-number">01</div>
+                    <div class="feat-icon-box">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>JWT Security & Auth</h3>
+                    <p>Utilize robust tokenization to secure APIs, custom channels, and local-to-cloud connections with military-grade encryption.</p>
+                    <div class="feature-tags">
+                        <span class="tag">OAuth 2.0</span>
+                        <span class="tag">RS256</span>
+                        <span class="tag">RBAC</span>
+                    </div>
+                    <a href="#" class="feature-link">
+                        Learn more 
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <div class="feature-item glass-card" style="--accent: var(--accent-purple);">
+                    <div class="feature-number">02</div>
+                    <div class="feat-icon-box">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                        </svg>
+                    </div>
+                    <h3>Redis Ledgers</h3>
+                    <p>Rate limit and cache active API calls, ensuring high availability, sub-millisecond response latency, and 99.99% uptime.</p>
+                    <div class="feature-tags">
+                        <span class="tag">In-Memory</span>
+                        <span class="tag">Pub/Sub</span>
+                        <span class="tag">Cluster</span>
+                    </div>
+                    <a href="#" class="feature-link">
+                        Learn more 
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+
+                <div class="feature-item glass-card" style="--accent: var(--accent-pink);">
+                    <div class="feature-number">03</div>
+                    <div class="feat-icon-box">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Dockerized Deployment</h3>
+                    <p>Every server-side service compiles and launches under clean micro-service container files, easily deployable to AWS or VPS.</p>
+                    <div class="feature-tags">
+                        <span class="tag">K8s</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Auto-scale</span>
+                    </div>
+                    <a href="#" class="feature-link">
+                        Learn more 
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .features-section {
+        padding: clamp(4rem, 8vw, 7rem) 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .features-section::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -15%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    
+    .section-header {
+        margin-bottom: clamp(3rem, 6vw, 5rem);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .section-eyebrow {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent-cyan);
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        border-radius: 999px;
+        background: rgba(34, 211, 238, 0.05);
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        color: var(--text-secondary);
+        max-width: 680px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+    
+    .features-wrapper {
+        position: relative;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .feature-item {
+        padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        border-radius: 20px;
+        background: rgba(24, 24, 27, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px) saturate(180%);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .feature-item::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--accent), transparent);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+    
+    .feature-item:hover {
+        transform: translateY(-12px);
+        border-color: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    }
+    
+    .feature-item:hover::before {
+        opacity: 0.05;
+    }
+    
+    .feature-number {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.03);
+        line-height: 1;
+        pointer-events: none;
+    }
+
+    .feat-icon-box {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        transition: all 0.4s ease;
+        position: relative;
+    }
+    
+    .feat-icon-box::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--accent), transparent);
+        opacity: 0;
+        filter: blur(16px);
+        transition: opacity 0.4s ease;
+        z-index: -1;
+    }
+    
+    .feature-item:hover .feat-icon-box {
+        transform: scale(1.1) rotate(-5deg);
+        background: rgba(255, 255, 255, 0.06);
+        border-color: var(--accent);
+    }
+    
+    .feature-item:hover .feat-icon-box::after {
+        opacity: 0.4;
+    }
+
+    .feature-item h3 {
+        font-size: clamp(1.25rem, 3vw, 1.5rem);
+        font-weight: 700;
+        color: var(--text-primary);
+        margin: 0;
+    }
+
+    .feature-item p {
+        color: var(--text-secondary);
+        font-size: clamp(0.9rem, 2vw, 1rem);
+        line-height: 1.7;
+        flex-grow: 1;
+        margin: 0;
+    }
+    
+    .feature-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.35rem 0.75rem;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--text-muted);
+        transition: all 0.2s ease;
+    }
+    
+    .tag:hover {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+    
+    .feature-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--accent);
+        text-decoration: none;
+        margin-top: 0.5rem;
+        transition: gap 0.3s ease;
+    }
+    
+    .feature-link:hover {
+        gap: 0.75rem;
+    }
+    
+    .feature-link svg {
+        transition: transform 0.3s ease;
+    }
+    
+    .feature-link:hover svg {
+        transform: translateX(4px);
+    }
+    
+    /* Tablet */
+    @media (max-width: 1024px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .feature-item:last-child {
+            grid-column: 1 / -1;
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    
+    /* Mobile: Horizontal Scroll */
+    @media (max-width: 768px) {
+        .features-wrapper {
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 1.5rem;
+        }
+        
+        .features-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .features-grid {
+            display: flex;
+            gap: 1.25rem;
+            grid-template-columns: none;
+            width: max-content;
+            padding-bottom: 0.5rem;
+        }
+        
+        .feature-item {
+            flex: 0 0 320px;
+            min-width: 320px;
+            scroll-snap-align: start;
+        }
+        
+        .feature-item:last-child {
+            grid-column: auto;
+            max-width: none;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-6px);
+        }
+    }
+    
+    /* Small Mobile */
+    @media (max-width: 480px) {
+        .features-wrapper {
+            margin: 0 -1rem;
+            padding: 0 1rem;
+        }
+        
+        .feature-item {
+            flex: 0 0 280px;
+            min-width: 280px;
+            padding: 1.75rem 1.25rem;
+        }
+        
+        .feature-number {
+            font-size: 2.5rem;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .feature-item,
+        .feat-icon-box,
+        .feature-link {
+            transition: none;
+        }
+    }
+</style>

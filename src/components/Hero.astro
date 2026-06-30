@@ -1,0 +1,464 @@
+---
+
+---
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Dream Tech In Next Generation
+            </div>
+            <h1 class="hero-title">
+                Build The Future <br />
+                With <span class="text-gradient">DTing</span>
+            </h1>
+            <p class="hero-subtitle">
+                Built for everyone. A high-performance, secure platform that runs smoothly right in your browser — powering authentication, cloud APIs, and real-time communication for modern user.
+            </p>
+            <div class="hero-actions">
+                <a href="https://auth.dting.online/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Get Started
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Interactive Dashboard Graphic -->
+        <div class="hero-graphic float-element">
+            <div class="glass-card console-card">
+                <div class="console-header">
+                    <div class="console-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="console-title">platform-overview.sh</div>
+                </div>
+                <div class="console-body">
+                    <div class="console-line">
+                        <span class="console-prompt">$</span> <span class="text-secondary">dting status --all</span>
+                    </div>
+                    <div class="console-line text-success">
+                        ✔ Core Authentication Services online [200 OK]
+                    </div>
+                    <div class="console-line text-success">
+                        ✔ Cloud APIs gateway responding [12ms]
+                    </div>
+                    <div class="console-line text-success">
+                        ✔ Real-Time Chat Infrastructure active
+                    </div>
+                    <div class="console-line text-cyan">
+                        ℹ Active Services Loaded: 4 core apps
+                    </div>
+                    <div class="console-separator"></div>
+                    
+                    <div class="status-charts">
+                        <div class="chart-item">
+                            <div class="chart-label">CPU</div>
+                            <svg viewBox="0 0 36 36" class="circular-chart cyan">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="24, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">24%</text>
+                            </svg>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">RAM</div>
+                            <svg viewBox="0 0 36 36" class="circular-chart purple">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="48, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">48%</text>
+                            </svg>
+                        </div>
+                        <div class="chart-item">
+                            <div class="chart-label">API</div>
+                            <svg viewBox="0 0 36 36" class="circular-chart pink">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">99%</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hero Section */
+.hero-section {
+    padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.hero-badge {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.125rem;
+    border-radius: 50px;
+    background: rgba(0, 242, 254, 0.08);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    color: var(--accent-cyan);
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    backdrop-filter: blur(10px);
+}
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--accent-cyan);
+    box-shadow: 0 0 8px var(--accent-cyan);
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.hero-title {
+    font-size: clamp(2.25rem, 7vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid transparent;
+    min-height: 48px;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 242, 254, 0.35);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+}
+
+/* Console Widget Graphic */
+.hero-graphic {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.float-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.console-card {
+    width: 100%;
+    max-width: 440px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.6);
+    background: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(20px) saturate(180%);
+}
+
+.console-header {
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.console-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.dot-red { background-color: #ff5f56; }
+.dot-yellow { background-color: #ffbd2e; }
+.dot-green { background-color: #27c93f; }
+
+.console-card:hover .dot {
+    filter: brightness(1.2);
+}
+
+.console-title {
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.console-body {
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    background: rgba(7, 9, 14, 0.5);
+}
+
+.console-prompt {
+    color: var(--accent-pink);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.text-secondary { color: var(--text-secondary); }
+.text-success { color: #4ade80; }
+.text-cyan { color: var(--accent-cyan); }
+
+.console-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    margin: 0.5rem 0;
+}
+
+.status-charts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    margin-top: 0.5rem;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.chart-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: clamp(50px, 12vw, 65px);
+    max-height: clamp(50px, 12vw, 65px);
+    width: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 3.5;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 3.5;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.6s ease;
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    from { stroke-dasharray: 0, 100; }
+}
+
+.cyan .circle { stroke: var(--accent-cyan); }
+.purple .circle { stroke: var(--accent-purple); }
+.pink .circle { stroke: var(--accent-pink); }
+
+.percentage {
+    fill: #fff;
+    font-family: var(--font-heading);
+    font-size: 8px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+/* Tablet Breakpoint */
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .hero-badge {
+        align-self: center;
+    }
+    
+    .hero-subtitle {
+        margin: 0 auto;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .float-element {
+        animation: none;
+    }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0 2rem 0;
+    }
+    
+    .hero-title {
+        line-height: 1.15;
+    }
+    
+    .hero-title br {
+        display: none;
+    }
+    
+    .console-card {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+    
+    .status-charts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+    
+    .console-header {
+        padding: 0.75rem 1rem;
+    }
+    
+    .console-body {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+    
+    .status-charts {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .chart-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    .float-element,
+    .badge-dot,
+    .circle {
+        animation: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
+</style>

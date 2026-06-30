@@ -1,0 +1,397 @@
+---
+// Service data array বানাও
+// Service data array
+const services = [
+	{
+		id: 'qrtoolkit',
+		title: 'QR Toolkit',
+		desc: 'Complete client-side operations: Generate custom QR codes, scan barcodes, and manage QR-based authentication with ease.',
+		tag: 'Utilities',
+		status: 'active', // active | incoming
+		liveLink: 'http://qrtoolkit.dting.online/',
+		detailsUrl: '/services/qrtoolkit',
+		iconType: 'toolkit',
+		stack: ['Astro', 'Node.js'],
+		icon: `https://res.cloudinary.com/dgh76k5vn/image/upload/v1782788266/qrtoolkit_jgqjve.png`
+	},
+	{
+		id: 'imtoolkit',
+		title: 'Image Toolkit',
+		desc: 'Complete client-side operations: compress, crop, resize, rotate, and convert formats with absolute safety in your browser.',
+		tag: 'Images',
+		status: 'incoming',
+		liveLink: 'http://imtoolkit.dting.online/',
+		detailsUrl: '/services/imtoolkit',
+		iconType: 'toolkit',
+		stack: ['Astro', 'Node.js'],
+		icon: `https://res.cloudinary.com/dgh76k5vn/image/upload/v1782788835/imtoolkit_ykdqui.png`
+	},
+	{
+		id: 'dtalk',
+		title: 'DTalk Messenger',
+		desc: 'Next-generation real-time messenger featuring customizable server channels, encrypted DM support, and lightning-fast file exchanges.',
+		tag: 'Chat',
+		status: 'incoming',
+		liveLink: '/services/dtalk',
+		detailsUrl: '/services/dtalk/details',
+		iconType: 'dtalk',
+		stack: ['WebSocket', 'E2E Encryption'],
+		icon: `https://res.cloudinary.com/dgh76k5vn/image/upload/v1782789529/dtalk_qphukf.png`
+	},
+	{
+		id: 'pocketpay',
+		title: 'PocketPay',
+		desc: 'A premium mobile finance tracking and peer-to-peer transaction platform. Send, request, and manage funds in real-time.',
+		tag: 'Finance',
+		status: 'incoming',
+		liveLink: '/services/pocketpay',
+		detailsUrl: '/services/pocketpay/details',
+		iconType: 'finance',
+		stack: ['Next.js', 'PostgreSQL', 'Stripe'],
+		icon: `https://res.cloudinary.com/dgh76k5vn/image/upload/v1769602666/app_logo_ibnykm.png`
+	},
+	{
+		id: 'dlink',
+		title: 'DLink URL Shortener',
+		desc: 'Generate short custom aliases, track granular user click analytics, generate QR codes, and run bulk links compression.',
+		tag: 'API Tool',
+		status: 'incoming',
+		liveLink: '/services/virelix',
+		detailsUrl: 'http://link.dting.online/',
+		iconType: 'dlink',
+		stack: ['Astro', 'FastAPI', 'PostgreSQL'],
+		icon: `https://res.cloudinary.com/dgh76k5vn/image/upload/v1782789916/dlink_scjz43.png`
+	}
+];
+
+---
+
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <div class="container">
+        <div class="section-header text-center">
+            <h2 class="section-title">Our Ecosystem & <span class="text-gradient">Services</span></h2>
+            <p class="section-subtitle">A collection of custom applications engineered for seamless daily utility.</p>
+        </div>
+
+        <div class="services-grid">
+            {services.map((service) => (
+                <div class={`service-card glass-card ${service.status}`} >
+                    <div class="service-card-header">
+                        <div class={`service-icon-wrapper ${service.iconType}`}>
+							<img 
+								src={service.icon} 
+								alt="Service Icon" 
+								width="32" 
+								height="32" 
+								/>
+                        </div>
+                        {service.status === 'incoming' && (
+                            <span class="service-badge">Coming Soon</span>
+                        )}
+                    </div>
+                    
+                    <h3 class="service-card-title">{service.title}</h3>
+                    <p class="service-card-desc">{service.desc}</p>
+
+                    {service.stack && (
+                        <div class="service-stack">
+                            {service.stack.map((tech) => (
+                                <span class="stack-badge">{tech}</span>
+                            ))}
+                        </div>
+                    )}
+                    
+                    <div class="service-card-footer">
+                        <span class="service-tag">{service.tag}</span>
+                        <div class="service-actions">
+                            <a 
+                                href={service.status === 'active' ? service.detailsUrl : '#'} 
+                                class={`service-link secondary ${service.status !== 'active' ? 'disabled' : ''}`}
+                                aria-disabled={service.status !== 'active'}
+                                tabindex={service.status !== 'active' ? -1 : 0}
+                            >
+                                Details
+                            </a>
+                            <a 
+                                href={service.status === 'active' ? service.liveLink : '#'} 
+                                target={service.status === 'active' ? '_blank' : '_self'}
+                                rel="noopener noreferrer" 
+                                class={`service-link primary ${service.status !== 'active' ? 'disabled' : ''}`}
+                                aria-disabled={service.status !== 'active'}
+                                tabindex={service.status !== 'active' ? -1 : 0}
+                            >
+                                {service.status === 'active' ? 'Live Demo' : 'Preview'}
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    :root {
+        --border-color: rgba(255, 255, 255, 0.1);
+        --text-primary: #ffffff;
+        --text-secondary: #a1a1aa;
+        --text-muted: #71717a;
+        --accent-cyan: #00f2fe;
+        --accent-purple: #7f00ff;
+        --accent-pink: #f35588;
+        --font-heading: 'Inter', sans-serif;
+    }
+
+    .services-section {
+		padding: 6rem 0;
+		position: relative;
+	}
+	
+	.section-header {
+		margin-bottom: 4rem;
+	}
+	
+	.section-title {
+		font-size: clamp(2rem, 5vw, 3rem);
+		font-weight: 800;
+		margin-bottom: 1rem;
+	}
+	
+	.text-gradient {
+		background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	
+	.section-subtitle {
+		font-size: 1.125rem;
+		color: var(--text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card {
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+		border: 1px solid var(--border-color);
+		border-radius: 24px;
+		background: rgba(255, 255, 255, 0.02);
+		backdrop-filter: blur(10px);
+	}
+	
+	.service-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(0, 242, 254, 0.05) 0%, rgba(127, 0, 255, 0.05) 100%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		z-index: 0;
+	}
+	
+	.service-card > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	.service-card.active:hover {
+		transform: translateY(-8px);
+		border-color: rgba(0, 242, 254, 0.3);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+	
+	.service-card.active:hover::before {
+		opacity: 1;
+	}
+	
+	.service-card.incoming {
+		opacity: 0.65;
+		cursor: default;
+	}
+	
+	.service-card.incoming:hover {
+		transform: translateY(-4px);
+	}
+
+	.service-card-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.service-icon-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 16px;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid var(--border-color);
+		transition: all 0.3s ease;
+	}
+	
+	.service-card.active:hover .service-icon-wrapper {
+		box-shadow: 0 0 24px rgba(0, 242, 254, 0.2);
+		transform: scale(1.05);
+	}
+
+	.service-icon-wrapper.finance { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.25); }
+	.service-icon-wrapper.toolkit { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.25); }
+	.service-icon-wrapper.virelix { color: #10b981; border-color: rgba(16, 185, 129, 0.25); }
+	.service-icon-wrapper.dtalk { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.25); }
+	
+	.service-badge {
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		padding: 0.35rem 0.75rem;
+		border-radius: 20px;
+		background: rgba(255, 184, 0, 0.1);
+		color: #ffb800;
+		border: 1px solid rgba(255, 184, 0, 0.2);
+		white-space: nowrap;
+	}
+
+	.service-card-title {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+
+	.service-card-desc {
+		color: var(--text-secondary);
+		font-size: 1rem;
+		line-height: 1.6;
+		flex-grow: 1;
+	}
+	
+	.service-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: -0.25rem;
+	}
+	
+	.stack-badge {
+		font-size: 0.75rem;
+		font-weight: 500;
+		padding: 0.25rem 0.625rem;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid var(--border-color);
+		color: var(--text-secondary);
+	}
+
+	.service-card-footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 1rem;
+		border-top: 1px solid var(--border-color);
+		padding-top: 1.25rem;
+	}
+
+	.service-tag {
+		font-size: 0.8rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--text-muted);
+	}
+	
+	.service-actions {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.service-link {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-family: var(--font-heading);
+		font-weight: 600;
+		font-size: 0.95rem;
+		transition: all 0.3s ease;
+		text-decoration: none;
+	}
+	
+	.service-link.primary { color: var(--accent-cyan); }
+	.service-link.secondary { color: var(--text-secondary); }
+
+	.service-link svg {
+		transition: transform 0.3s ease;
+	}
+
+	.service-card.active:hover .service-link.primary:not(.disabled) svg {
+		transform: translateX(4px);
+	}
+
+	.service-link.primary:not(.disabled):hover { color: var(--text-primary); }
+	.service-link.secondary:not(.disabled):hover { color: var(--text-primary); }
+	
+	.service-link.disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+	
+	/* Responsive */
+	@media (max-width: 1024px) {
+		.services-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	
+	@media (max-width: 768px) {
+		.services-section {
+			padding: 4rem 0;
+		}
+		.section-header {
+			margin-bottom: 3rem;
+		}
+		.services-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		.service-card {
+			padding: 2rem 1.5rem;
+		}
+		.service-actions {
+			flex-direction: column;
+			align-items: flex-end;
+			gap: 0.75rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.service-card-footer {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
+		}
+		.service-actions {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+</style>

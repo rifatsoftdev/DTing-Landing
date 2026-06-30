@@ -1,0 +1,374 @@
+---
+---
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="container about-container">
+        <div class="section-header text-center">
+            <span class="section-eyebrow">About Us</span>
+            <h2 class="section-title">What is <span class="text-gradient">DTing</span>?</h2>
+            <p class="section-subtitle">Dream Tech In Next Generation — empowering user and businesses with cutting-edge tools built for the modern web.</p>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-text-block glass-card">
+                <div class="about-text-content">
+                    <p class="text-lead">
+                        DTing is a comprehensive next-generation platform developed to address complex requirements in secure finance tracking, digital image utilities, fast custom URL generation, and end-to-end encrypted chats.
+                    </p>
+                    <p>
+                        We believe in building utilities that are <span class="text-highlight">fast, modern, and highly responsive</span>. Many of our tools operate strictly on client-side sandboxes ensuring maximum data privacy, while our cloud products leverage highly scalable node architectures.
+                    </p>
+                    <div class="about-stats-inline">
+                        <div class="inline-stat">
+                            <span class="inline-stat-number">4+</span>
+                            <span class="inline-stat-label">Core Products</span>
+                        </div>
+                        <div class="inline-stat">
+                            <span class="inline-stat-number">Browser-First</span>
+                            <span class="inline-stat-label">Processing</span>
+                        </div>
+                        <div class="inline-stat">
+                            <span class="inline-stat-number">24/7</span>
+                            <span class="inline-stat-label">Availability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-features">
+                <div class="about-feat-item" style="--accent: var(--accent-cyan);">
+                    <div class="feat-icon-wrapper cyan">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="feat-content">
+                        <h4 class="feat-title">Privacy First Architecture</h4>
+                        <p class="feat-desc">Privacy by design: most operations run locally in your browser, minimizing data sent to servers. When server processing is required, your data is handled securely.</p>
+                    </div>
+                </div>
+                
+                <div class="about-feat-item" style="--accent: var(--accent-purple);">
+                    <div class="feat-icon-wrapper purple">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="feat-content">
+                        <h4 class="feat-title">Lightning Fast Performance</h4>
+                        <p class="feat-desc">Optimized pipelines that load instantly and respond in milliseconds using WebAssembly and edge computing.</p>
+                    </div>
+                </div>
+                
+                <div class="about-feat-item" style="--accent: var(--accent-pink);">
+                    <div class="feat-icon-wrapper pink">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="feat-content">
+                        <h4 class="feat-title">Developer Friendly APIs</h4>
+                        <p class="feat-desc">RESTful endpoints, WebSocket support, and SDKs for seamless integration into your existing workflow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        padding: clamp(4rem, 8vw, 7rem) 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-section::before {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(168, 85, 247, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .section-header {
+        margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    
+    .section-eyebrow {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent-cyan);
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        border-radius: 999px;
+        background: rgba(34, 211, 238, 0.05);
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        color: var(--text-secondary);
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: clamp(2.5rem, 5vw, 4.5rem);
+        align-items: start;
+    }
+
+    .about-text-block {
+        padding: clamp(2rem, 4vw, 3rem);
+        border-radius: 24px;
+        background: rgba(24, 24, 27, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px) saturate(180%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-text-block::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 40%;
+        background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .about-text-content {
+        position: relative;
+        padding: 0 clamp(2rem, 4vw, 2rem);
+        z-index: 1;
+    }
+    
+    .text-lead {
+        font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+        line-height: 1.8;
+        color: var(--text-primary);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .about-text-block p {
+        color: var(--text-secondary);
+        font-size: clamp(0.95rem, 2vw, 1.05rem);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-text-block p:last-of-type {
+        margin-bottom: 2rem;
+    }
+    
+    .text-highlight {
+        color: var(--accent-cyan);
+        font-weight: 600;
+        padding: 0.1rem 0.4rem;
+        background: rgba(34, 211, 238, 0.1);
+        border-radius: 4px;
+    }
+    
+    .about-stats-inline {
+        display: flex;
+        gap: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        flex-wrap: wrap;
+    }
+    
+    .inline-stat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .inline-stat-number {
+        font-size: clamp(1.5rem, 3vw, 1.75rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1;
+    }
+    
+    .inline-stat-label {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    .about-features {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .about-feat-item {
+        display: flex;
+        gap: 1.25rem;
+        padding: 1.75rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .about-feat-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: var(--accent);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+    
+    .about-feat-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+        border-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(8px);
+    }
+    
+    .about-feat-item:hover::before {
+        transform: scaleY(1);
+    }
+
+    .feat-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+    
+    .about-feat-item:hover .feat-icon-wrapper {
+        transform: rotate(-8deg) scale(1.1);
+        background: rgba(255, 255, 255, 0.06);
+        box-shadow: 0 0 24px color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+
+    .feat-icon-wrapper.cyan {
+        color: var(--accent-cyan);
+        border-color: rgba(34, 211, 238, 0.2);
+    }
+
+    .feat-icon-wrapper.purple {
+        color: var(--accent-purple);
+        border-color: rgba(168, 85, 247, 0.2);
+    }
+    
+    .feat-icon-wrapper.pink {
+        color: var(--accent-pink);
+        border-color: rgba(236, 72, 153, 0.2);
+    }
+    
+    .feat-content {
+        flex: 1;
+    }
+
+    .feat-title {
+        font-size: clamp(1.05rem, 2.5vw, 1.2rem);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .feat-desc {
+        font-size: clamp(0.9rem, 2vw, 0.95rem);
+        color: var(--text-secondary);
+        line-height: 1.7;
+    }
+    
+    /* Tablet */
+    @media (max-width: 1024px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+        
+        .about-text-block {
+            order: 2;
+        }
+        
+        .about-features {
+            order: 1;
+        }
+    }
+    
+    /* Mobile */
+    @media (max-width: 640px) {
+        .about-text-block {
+            padding: 1.75rem 1.25rem;
+        }
+        
+        .about-feat-item {
+            padding: 1.5rem 1.25rem;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .about-feat-item:hover {
+            transform: translateY(-4px);
+        }
+        
+        .feat-icon-wrapper {
+            margin: 0 auto;
+        }
+        
+        .about-stats-inline {
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        
+        .inline-stat {
+            flex: 1;
+            text-align: center;
+        }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .about-feat-item,
+        .feat-icon-wrapper {
+            transition: none;
+        }
+    }
+</style>

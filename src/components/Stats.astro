@@ -1,0 +1,269 @@
+---
+---
+
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="section-header-mini text-center">
+            <span class="section-eyebrow">Trusted Metrics</span>
+            <h2 class="section-title-small">Built for Scale & <span class="text-gradient">Reliability</span></h2>
+        </div>
+        
+        <div class="stats-wrapper">
+            <div class="stats-container">
+                <div class="stat-card glass-card" style="--accent: var(--accent-cyan);">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <h3 class="stat-number">99.9</h3>
+                        <span class="stat-suffix">%</span>
+                    </div>
+                    <p class="stat-title">Platform Reliability</p>
+                    <p class="stat-desc">Enterprise-grade uptime</p>
+                </div>
+                
+                <div class="stat-card glass-card" style="--accent: var(--accent-purple);">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <h3 class="stat-number">24</h3>
+                        <span class="stat-suffix">/7</span>
+                    </div>
+                    <p class="stat-title">Live Availability</p>
+                    <p class="stat-desc">Always-on services</p>
+                </div>
+                
+                <!-- <div class="stat-card glass-card" style="--accent: var(--accent-pink);">
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="stat-number-wrap">
+                        <h3 class="stat-number">10</h3>
+                        <span class="stat-suffix">K+</span>
+                    </div>
+                    <p class="stat-title">Developer Accounts</p>
+                    <p class="stat-desc">Trusted by builders</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .stats-section {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+        position: relative;
+    }
+    
+    .section-header-mini {
+        margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+    
+    .section-eyebrow {
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--accent-cyan);
+        margin-bottom: 0.75rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(34, 211, 238, 0.2);
+        border-radius: 999px;
+        background: rgba(34, 211, 238, 0.05);
+    }
+    
+    .section-title-small {
+        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
+
+    /* Wrapper for scroll on mobile */
+    .stats-wrapper {
+        position: relative;
+    }
+
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(1.5rem, 3vw, 2.5rem);
+    }
+
+    .stat-card {
+        padding: clamp(1.75rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem);
+        text-align: center;
+        position: relative;
+        border-radius: 20px;
+        background: rgba(24, 24, 27, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px) saturate(180%);
+        transition: all 0.3s ease;
+        overflow: hidden;
+        min-width: 0;
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .stat-card:hover::before {
+        opacity: 1;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .stat-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 1.25rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover .stat-icon {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.06);
+    }
+
+    .stat-number-wrap {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 0.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .stat-number {
+        font-size: clamp(2.25rem, 5vw, 3.25rem);
+        font-weight: 800;
+        line-height: 1;
+        background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, white));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .stat-suffix {
+        font-size: clamp(1.25rem, 3vw, 1.75rem);
+        font-weight: 700;
+        color: var(--accent);
+    }
+
+    .stat-title {
+        font-family: var(--font-heading);
+        font-size: clamp(0.95rem, 2vw, 1.1rem);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.4rem;
+    }
+
+    .stat-desc {
+        font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+        color: var(--text-secondary);
+        line-height: 1.5;
+    }
+    
+    /* Tablet & Mobile: Horizontal Scroll */
+    @media (max-width: 768px) {
+        .stats-wrapper {
+            margin: 0 -1.5rem;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 1.5rem;
+        }
+        
+        .stats-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .stats-container {
+            display: flex;
+            gap: 1.25rem;
+            grid-template-columns: none;
+            width: max-content;
+            padding-bottom: 0.5rem;
+        }
+        
+        .stat-card {
+            flex: 0 0 280px;
+            scroll-snap-align: start;
+            min-width: 280px;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+    }
+    
+    /* Small Mobile */
+    @media (max-width: 480px) {
+        .stats-wrapper {
+            margin: 0 -1rem;
+            padding: 0 1rem;
+        }
+        
+        .stat-card {
+            flex: 0 0 260px;
+            min-width: 260px;
+            padding: 1.5rem 1.25rem;
+        }
+    }
+    
+    /* Scroll Indicator Dots - Optional */
+    @media (max-width: 768px) {
+        .stats-wrapper::after {
+            content: '← Swipe →';
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .stat-card {
+            transition: none;
+        }
+    }
+</style>
