@@ -1,0 +1,924 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="QR Toolkit - Free QR Code Generator, Customizer & Scanner" description="Generate, customize, scan, and download QR codes completely free. Runs 100% in your browser with no server uploads and offline support.">
+	<Header />
+
+	<main class="service-detail-page">
+		<!-- Back Button & Breadcrumb -->
+		<section class="breadcrumb-section">
+			<div class="container">
+				<a href="/#services" class="back-link">
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+					Back to Services
+				</a>
+			</div>
+		</section>
+
+		<!-- Hero Detail Grid -->
+		<section class="detail-hero-section">
+			<div class="container detail-hero-container">
+				<div class="detail-hero-content">
+					<div class="detail-badge purple">
+						<span class="badge-dot purple-dot"></span>
+						Client-Side & Offline-Ready
+					</div>
+					<h1 class="detail-title">QR Toolkit</h1>
+					<p class="detail-tagline">Generate, customize, scan, and download QR codes completely free. A premium, fully client-side utility suite — no servers, no tracking, just fast offline-first tools.</p>
+
+					<div class="detail-ctas">
+						<a href="https://qrtoolkit.dting.online/generate" target="_blank" rel="noopener" class="btn btn-primary">
+							Generate QR
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+						</a>
+						<a href="#features" class="btn btn-secondary">Key Features</a>
+					</div>
+				</div>
+
+				<div class="detail-hero-image-wrapper">
+					<div class="image-frame-container">
+						<img src="/qr-preview.png" alt="QR Toolkit generator preview" class="preview-image desktop-mockup" loading="eager" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Promo Strip -->
+		<section class="promo-strip">
+			<div class="container promo-strip-inner">
+				<div class="promo-pill"><span class="promo-dot purple-dot"></span> 100% Free Forever</div>
+				<div class="promo-pill"><span class="promo-dot cyan-dot"></span> No File Uploads</div>
+				<div class="promo-pill"><span class="promo-dot pink-dot"></span> Works Offline</div>
+				<div class="promo-pill"><span class="promo-dot purple-dot"></span> MIT Licensed</div>
+			</div>
+		</section>
+
+		<!-- Features Grid -->
+		<section class="detail-features-section" id="features">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Everything You Need, Built Local</h2>
+				<p class="detail-section-sub text-center">No cloud queues, no processing accounts. QR Toolkit runs directly on your machine's hardware using web standards.</p>
+				<div class="features-detail-grid">
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon free-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+						</div>
+						<h3>100% Free Forever</h3>
+						<p>Generate and scan unlimited high-resolution QR codes. No subscriptions, no microtransactions, completely open access.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon lock-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+						</div>
+						<h3>Completely Private</h3>
+						<p>Your data is fully secure. No camera feeds or content payloads are ever uploaded to any web servers. Everything is processed locally.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon lightning-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+						</div>
+						<h3>Blazing Fast Speed</h3>
+						<p>Instant client-side rendering. Downloads and scans execute within milliseconds without waiting on network delays.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon browser-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+						</div>
+						<h3>Fully Browser Based</h3>
+						<p>Operates directly in your browser. Fully functional offline. No desktop software downloads or mobile apps required.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon upload-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+						</div>
+						<h3>Zero File Uploads</h3>
+						<p>Uploaded scanning images are processed directly inside client memory. Data disappears the second you close the tab.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon export-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+						</div>
+						<h3>High-Res Exports</h3>
+						<p>Download in web-ready formats (PNG, JPEG) or clean vectors (SVG) at up to 4x resolution scale for print media.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery / Showcase -->
+		<section class="gallery-section">
+			<div class="container">
+				<h2 class="detail-section-title text-center">A Look Inside the Toolkit</h2>
+				<p class="detail-section-sub text-center">Pick a type, style it your way, and export — all without leaving your browser.</p>
+				<div class="gallery-grid">
+					<figure class="gallery-item glass-card">
+						<img src="/qr-preview.png" alt="QR Toolkit generator preview" loading="lazy" />
+						<figcaption>QR Generator</figcaption>
+					</figure>
+					<figure class="gallery-item glass-card">
+						<img src="/qr-preview-2.png" alt="QR Toolkit scanner preview" loading="lazy" />
+						<figcaption>QR Scanner</figcaption>
+					</figure>
+					<figure class="gallery-item glass-card">
+						<img src="/qr-preview-3.png" alt="QR Toolkit mobile view" loading="lazy" />
+						<figcaption>Mobile Friendly</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- QR Types -->
+		<section class="types-section">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Every QR Type You Need</h2>
+				<p class="detail-section-sub text-center">From simple links to crypto payments — generate a scannable code for almost anything.</p>
+				<div class="types-grid">
+					<div class="type-chip"><span class="type-emoji">🔗</span> URL</div>
+					<div class="type-chip"><span class="type-emoji">📝</span> Text</div>
+					<div class="type-chip"><span class="type-emoji">✉️</span> Email</div>
+					<div class="type-chip"><span class="type-emoji">📞</span> Phone</div>
+					<div class="type-chip"><span class="type-emoji">💬</span> SMS</div>
+					<div class="type-chip"><span class="type-emoji">📶</span> WiFi</div>
+					<div class="type-chip"><span class="type-emoji">👤</span> Contact (vCard)</div>
+					<div class="type-chip"><span class="type-emoji">💚</span> WhatsApp</div>
+					<div class="type-chip"><span class="type-emoji">✈️</span> Telegram</div>
+					<div class="type-chip"><span class="type-emoji">₿</span> Bitcoin</div>
+					<div class="type-chip"><span class="type-emoji">Ξ</span> Ethereum</div>
+					<div class="type-chip"><span class="type-emoji">📅</span> Calendar Event</div>
+					<div class="type-chip"><span class="type-emoji">📍</span> Geo Location</div>
+					<div class="type-chip"><span class="type-emoji">🌐</span> Social Link</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Customization -->
+		<section class="customize-section">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Make It Uniquely Yours</h2>
+				<p class="detail-section-sub text-center">Advanced customization options so your QR codes match your brand perfectly.</p>
+				<div class="benefits-grid">
+					<div class="benefit-card">
+						<div class="benefit-icon color-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"></circle><circle cx="17.5" cy="10.5" r="2.5"></circle><circle cx="8.5" cy="7.5" r="2.5"></circle><circle cx="6.5" cy="12.5" r="2.5"></circle><path d="M12 22a10 10 0 1 1 0-20"></path></svg>
+						</div>
+						<h3>Color & Gradient</h3>
+						<p>Choose solid or linear/radial gradient foreground colors and background colors, plus transparent backgrounds.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon shape-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="3"></rect><rect x="3" y="14" width="7" height="7" rx="3"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+						</div>
+						<h3>Dot & Corner Styles</h3>
+						<p>Pick dot patterns (square, rounded, circular, classy) and style the corner squares and dots to taste.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon logo-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+						</div>
+						<h3>Logo Branding</h3>
+						<p>Embed your company logo in the center with adjustable size ratio, margin, and a default QR Toolkit mark.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon ecc-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+						</div>
+						<h3>Error Correction</h3>
+						<p>Select ECC level L, M, Q, or H (up to 30% recovery) so codes stay scannable even with big logos.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon export-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+						</div>
+						<h3>Resolution Scale</h3>
+						<p>Export at 1x (500px), 2x (1000px), or 4x (2000px) in PNG, JPEG, or clean vector SVG for print.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon template-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+						</div>
+						<h3>Preset Templates</h3>
+						<p>Start fast with ready-made looks like Classic Black, Corporate Blue, Sunset Radial, Forest Gold, and Midnight Glow.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How to Use / Run Locally -->
+		<section class="integration-section" id="integration">
+			<div class="container integration-container glass-card">
+				<div class="integration-content">
+					<h2>Run the QR Toolkit Locally</h2>
+					<p class="integration-summary">Want to host or run the QR Toolkit on your own device? It's fully self-contained and open source. Follow these steps to set it up.</p>
+
+					<div class="steps-list">
+						<div class="step-item">
+							<span class="step-number">1</span>
+							<div class="step-text">
+								<h4>Clone the Repository</h4>
+								<p>Grab the source files directly from our repository system.</p>
+								<div class="code-block-wrapper">
+									<pre><code>git clone https://github.com/rifatsoftdev/QR-Toolkit-Web.git</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">2</span>
+							<div class="step-text">
+								<h4>Install Dependencies</h4>
+								<p>Navigate into the directory and install local packages using npm or yarn.</p>
+								<div class="code-block-wrapper">
+									<pre><code>cd QR-Toolkit-Web && npm install</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">3</span>
+							<div class="step-text">
+								<h4>Boot Dev Server</h4>
+								<p>Start a local dev server and open your browser at the default port.</p>
+								<div class="code-block-wrapper">
+									<pre><code>npm run dev</code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="integration-cta">
+						<a href="https://qrtoolkit.dting.online/generate" target="_blank" rel="noopener" class="btn btn-primary">
+							Try It Now
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+						</a>
+						<a href="https://github.com/rifatsoftdev/QR-Toolkit-Web" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="faq-section">
+			<div class="container faq-container">
+				<h2 class="detail-section-title text-center">Frequently Asked Questions</h2>
+				<p class="detail-section-sub text-center">Quick answers about pricing, logos, WiFi codes, and troubleshooting.</p>
+				<div class="faq-list">
+					<details class="faq-item glass-card">
+						<summary>Are QR Codes Free?</summary>
+						<div class="faq-answer">
+							<p>Yes, our QR Toolkit is 100% free. Static QR codes will work for a lifetime without expiration.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Can I add a logo to my QR Code?</summary>
+						<div class="faq-answer">
+							<p>Yes, go to the Generate page and click on the Upload Logo button to add your company logo.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>How do I create a WiFi QR Code?</summary>
+						<div class="faq-answer">
+							<p>On the Generate page, select the WiFi option, enter your SSID, password, and encryption type, then click Create.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>QR Code not working?</summary>
+						<div class="faq-answer">
+							<p>Check if the print quality is good. Leave white space around the QR code. Large logos may prevent scanning.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Why does my QR code not work?</summary>
+						<div class="faq-answer">
+							<p>1. Check print quality. 2. Leave white space around the QR code. 3. Large logos may prevent scanning.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>How do I generate a Bkash QR Code?</summary>
+						<div class="faq-answer">
+							<p>Go to the Generate page, select the Text option, enter your Bkash merchant number, and click Create.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	/* Common styles matching pocketpay.astro */
+	.service-detail-page {
+		padding-top: var(--header-height);
+		flex-grow: 1;
+	}
+
+	.breadcrumb-section {
+		padding: 2rem 0 1rem 0;
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--text-secondary);
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.back-link:hover {
+		color: var(--text-primary);
+		transform: translateX(-3px);
+	}
+
+	/* Hero Detail Section */
+	.detail-hero-section {
+		padding: 2rem 0 5rem 0;
+	}
+
+	.detail-hero-container {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.detail-hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.detail-badge {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 1rem;
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		font-family: var(--font-heading);
+	}
+
+	.detail-badge.purple {
+		background: rgba(127, 0, 255, 0.08);
+		border: 1px solid rgba(127, 0, 255, 0.2);
+		color: var(--accent-purple);
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+	}
+
+	.cyan-dot {
+		background-color: var(--accent-cyan);
+		box-shadow: 0 0 8px var(--accent-cyan);
+	}
+
+	.pink-dot {
+		background-color: var(--accent-pink);
+		box-shadow: 0 0 8px var(--accent-pink);
+	}
+
+	.purple-dot {
+		background-color: var(--accent-purple);
+		box-shadow: 0 0 8px var(--accent-purple);
+	}
+
+	.detail-title {
+		font-size: 4rem;
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+
+	.detail-tagline {
+		color: var(--text-secondary);
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.detail-ctas {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+		flex-wrap: wrap;
+	}
+
+	/* Image display */
+	.detail-hero-image-wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.image-frame-container {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 12px;
+		padding: 6px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+	}
+
+	.preview-image {
+		border-radius: 8px;
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+	}
+
+	/* Promo strip */
+	.promo-strip {
+		padding: 0 0 2rem 0;
+	}
+
+	.promo-strip-inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.promo-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.55rem 1.1rem;
+		border-radius: 50px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+	}
+
+	/* Features section */
+	.detail-features-section {
+		padding: 5rem 0;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.detail-section-title {
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.detail-section-sub {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		max-width: 640px;
+		margin: 0 auto 3.5rem auto;
+		line-height: 1.6;
+	}
+
+	.features-detail-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.feat-detail-card {
+		padding: 3rem 2.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.feat-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.free-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+	.lock-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.lightning-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+	.browser-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.upload-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+	.export-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+
+	.feat-detail-card h3 {
+		font-size: 1.35rem;
+		font-weight: 600;
+	}
+
+	.feat-detail-card p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Gallery */
+	.gallery-section {
+		padding: 5rem 0;
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+
+	.gallery-item {
+		margin: 0;
+		padding: 0.75rem;
+		overflow: hidden;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+	}
+
+	.gallery-item figcaption {
+		padding: 1rem 0.5rem 0.5rem 0.5rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+		text-align: center;
+	}
+
+	/* QR Types */
+	.types-section {
+		padding: 5rem 0;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.types-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.type-chip {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 1rem 1.1rem;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--text-primary);
+	}
+
+	.type-emoji {
+		font-size: 1.1rem;
+		line-height: 1;
+	}
+
+	/* Customization */
+	.customize-section {
+		padding: 5rem 0;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.benefit-card {
+		padding: 2.5rem 2rem;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.benefit-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 46px;
+		height: 46px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.color-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.shape-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+	.logo-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+	.ecc-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.template-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+
+	.benefit-card h3 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.benefit-card p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Integration / Local setup section */
+	.integration-section {
+		padding: 6rem 0 8rem 0;
+	}
+
+	.integration-container {
+		padding: 5rem 4.5rem;
+		border: 1px solid rgba(127, 0, 255, 0.15);
+	}
+
+	.integration-content {
+		max-width: 800px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.integration-content h2 {
+		font-size: 2.25rem;
+	}
+
+	.integration-summary {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+	}
+
+	.steps-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.step-item {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.step-number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: rgba(127, 0, 255, 0.1);
+		border: 1px solid rgba(127, 0, 255, 0.3);
+		color: var(--accent-purple);
+		font-family: var(--font-heading);
+		font-weight: bold;
+		font-size: 0.95rem;
+	}
+
+	.step-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		flex-grow: 1;
+		min-width: 0;
+	}
+
+	.step-text h4 {
+		font-size: 1.15rem;
+		font-weight: 600;
+	}
+
+	.step-text p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.integration-cta {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	/* Code Block styling */
+	.code-block-wrapper {
+		background: rgba(7, 9, 14, 0.6);
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		padding: 0.85rem 1.25rem;
+		margin-top: 0.5rem;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	.code-block-wrapper pre {
+		margin: 0;
+	}
+
+	.code-block-wrapper code {
+		font-family: 'Courier New', Courier, monospace;
+		color: #e2e8f0;
+		font-size: 0.9rem;
+	}
+
+	/* FAQ */
+	.faq-section {
+		padding: 5rem 0 6rem 0;
+	}
+
+	.faq-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.faq-item summary {
+		list-style: none;
+		cursor: pointer;
+		padding: 1.5rem 1.75rem;
+		font-weight: 600;
+		font-size: 1.05rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.faq-item summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-item summary::after {
+		content: "+";
+		font-size: 1.5rem;
+		line-height: 1;
+		color: var(--accent-purple);
+		flex-shrink: 0;
+		transition: transform 0.2s ease;
+	}
+
+	.faq-item[open] summary::after {
+		content: "\2212";
+	}
+
+	.faq-answer {
+		padding: 0 1.75rem 1.5rem 1.75rem;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Responsive Breakpoints */
+	@media (max-width: 992px) {
+		.detail-hero-container {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 3rem;
+		}
+
+		.detail-badge {
+			align-self: center;
+		}
+
+		.detail-ctas {
+			justify-content: center;
+		}
+
+		.features-detail-grid,
+		.benefits-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.gallery-grid {
+			grid-template-columns: 1fr;
+			max-width: 520px;
+			margin: 0 auto;
+		}
+
+		.types-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.integration-container {
+			padding: 4rem 2.5rem;
+		}
+
+		.faq-list {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.detail-title {
+			font-size: 3rem;
+		}
+
+		.detail-tagline {
+			font-size: 1.05rem;
+		}
+
+		.detail-section-title {
+			font-size: 1.85rem;
+		}
+
+		.types-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	@media (max-width: 576px) {
+		.detail-title {
+			font-size: 2.4rem;
+		}
+
+		.features-detail-grid,
+		.benefits-grid,
+		.types-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.detail-hero-section {
+			padding: 1rem 0 3rem 0;
+		}
+
+		.detail-features-section,
+		.gallery-section,
+		.types-section,
+		.customize-section,
+		.faq-section {
+			padding: 3.5rem 0;
+		}
+
+		.integration-section {
+			padding: 4rem 0 5rem 0;
+		}
+
+		.integration-container {
+			padding: 2.5rem 1.5rem;
+		}
+
+		.step-item {
+			gap: 1rem;
+		}
+
+		.promo-strip-inner {
+			gap: 0.6rem;
+		}
+
+		.promo-pill {
+			font-size: 0.8rem;
+			padding: 0.45rem 0.9rem;
+		}
+
+		.faq-item summary {
+			padding: 1.25rem 1.25rem;
+			font-size: 1rem;
+		}
+
+		.faq-answer {
+			padding: 0 1.25rem 1.25rem 1.25rem;
+		}
+	}
+</style>

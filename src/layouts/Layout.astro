@@ -21,6 +21,11 @@ const {
 		<meta name="description" content={description} />
 		
 		<meta name="google-adsense-account" content="ca-pub-2896973137343492">
+		
+		<!-- Prevent FOUC and declare adsbygoogle variable -->
+		<script is:inline>
+			window.adsbygoogle = window.adsbygoogle || [];
+		</script>
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2896973137343492" crossorigin="anonymous"></script>
 		
 		<!-- Google Fonts -->
@@ -29,6 +34,12 @@ const {
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 		
 		<title>{title}</title>
+		
+		<!-- Critical CSS for FOUC prevention -->
+		<style is:inline>
+			html { background-color: #07090e; }
+			body { background-color: #07090e; color: #ffffff; font-family: 'Inter', system-ui; }
+		</style>
 	</head>
 	<body>
 		<!-- Cyberpunk Background Grid & Glows -->
@@ -39,8 +50,6 @@ const {
 
 		<slot />
 
-		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2896973137343492"
-			crossorigin="anonymous"></script>
 		<!-- Main Ad -->
 		<ins class="adsbygoogle"
 			style="display:block"
@@ -48,7 +57,7 @@ const {
 			data-ad-slot="6719485428"
 			data-ad-format="auto"
 			data-full-width-responsive="true"></ins>
-		<script>
+		<script is:inline>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 	</body>

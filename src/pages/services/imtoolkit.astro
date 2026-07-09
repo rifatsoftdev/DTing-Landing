@@ -1,0 +1,858 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Image Toolkit - Client-Side Crop, Compress & Converter" description="Process images securely. Compress, convert, resize, crop, rotate, and strip metadata inside your web browser without uploading to any server.">
+	<Header />
+
+	<main class="service-detail-page">
+		<!-- Back Button & Breadcrumb -->
+		<section class="breadcrumb-section">
+			<div class="container">
+				<a href="/#services" class="back-link">
+					<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+					Back to Services
+				</a>
+			</div>
+		</section>
+
+		<!-- Hero Detail Grid -->
+		<section class="detail-hero-section">
+			<div class="container detail-hero-container">
+				<div class="detail-hero-content">
+					<div class="detail-badge cyan">
+						<span class="badge-dot cyan-dot"></span>
+						Client-Side Utility
+					</div>
+					<h1 class="detail-title">Image Toolkit</h1>
+					<p class="detail-tagline">Compress, convert, resize, crop, rotate, and strip metadata instantly. Powerful image utilities that run entirely in your browser — secure, private, and lightning fast.</p>
+
+					<div class="detail-ctas">
+						<a href="https://imtoolkit.dting.online/" target="_blank" rel="noopener" class="btn btn-primary">
+							Open Toolkit
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+						</a>
+						<a href="#features" class="btn btn-secondary">Key Features</a>
+					</div>
+				</div>
+
+				<div class="detail-hero-image-wrapper">
+					<div class="image-frame-container">
+						<img src="/toolkit-preview.png" alt="DTing Image Toolkit UI Workbench" class="preview-image desktop-mockup" loading="eager" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Promo Strip -->
+		<section class="promo-strip">
+			<div class="container promo-strip-inner">
+				<div class="promo-pill"><span class="promo-dot cyan-dot"></span> No Server Uploads</div>
+				<div class="promo-pill"><span class="promo-dot pink-dot"></span> 100% Free Forever</div>
+				<div class="promo-pill"><span class="promo-dot purple-dot"></span> No Watermarks</div>
+				<div class="promo-pill"><span class="promo-dot cyan-dot"></span> Works on Mobile</div>
+			</div>
+		</section>
+
+		<!-- Features Grid -->
+		<section class="detail-features-section" id="features">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Everything You Can Do</h2>
+				<p class="detail-section-sub text-center">A complete set of image operations, all running locally on your device.</p>
+				<div class="features-detail-grid">
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon compress-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h6v6"></path><path d="M20 10h-6V4"></path><path d="M14 10l7-7"></path><path d="M10 14l-7 7"></path></svg>
+						</div>
+						<h3>Lossless Compression</h3>
+						<p>Reduce file weights up to 90% without sacrificing visual fidelity. Choose quality sliders to control compression ratios.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon convert-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"></path><path d="M3 12.2v-2a4 4 0 0 1 4-4h14"></path><path d="M7 21.9l-4-4 4-4"></path><path d="M21 11.8v2a4 4 0 0 1-4 4H3"></path></svg>
+						</div>
+						<h3>Format Converter</h3>
+						<p>Instantly convert images between PNG, JPEG, WebP, AVIF, and GIF. Fully compatible with major browser rendering cores.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon resize-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"></path><path d="M9 21H3v-6"></path><path d="M21 3l-7 7"></path><path d="M3 21l7-7"></path></svg>
+						</div>
+						<h3>Smart Resize</h3>
+						<p>Set exact dimensions in pixels or scale proportionally. Maintain aspect ratio with a single toggle so nothing looks stretched.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon crop-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v16h16"></path><path d="M18 22V6H2"></path></svg>
+						</div>
+						<h3>Aspect Ratio Crop</h3>
+						<p>Crop images freely or lock presets (16:9, 4:3, 1:1 square, 9:16). An interactive canvas ensures you get the exact frame.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon rotate-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+						</div>
+						<h3>Rotate & Flip</h3>
+						<p>Rotate in 90° steps or flip horizontally and vertically to fix orientation before sharing — all without leaving the browser.</p>
+					</div>
+
+					<div class="feat-detail-card glass-card">
+						<div class="feat-icon exif-icon">
+							<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+						</div>
+						<h3>EXIF Stripper</h3>
+						<p>Remove GPS coordinates, camera model, and date-taken metadata so you can share photos without leaking private information.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Gallery / Showcase -->
+		<section class="gallery-section">
+			<div class="container">
+				<h2 class="detail-section-title text-center">A Look Inside the Toolkit</h2>
+				<p class="detail-section-sub text-center">Drag &amp; drop an image, tweak the controls, and download the result — that simple.</p>
+				<div class="gallery-grid">
+					<figure class="gallery-item glass-card">
+						<img src="/toolkit-preview.png" alt="Image Toolkit workbench preview" loading="lazy" />
+						<figcaption>Interactive Workbench</figcaption>
+					</figure>
+					<figure class="gallery-item glass-card">
+						<img src="/toolkit-preview-2.png" alt="Image Toolkit desktop view" loading="lazy" />
+						<figcaption>Desktop Layout</figcaption>
+					</figure>
+					<figure class="gallery-item glass-card">
+						<img src="/toolkit-preview-3.png" alt="Image Toolkit mobile view" loading="lazy" />
+						<figcaption>Mobile Friendly</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why DTing / Benefits -->
+		<section class="benefits-section">
+			<div class="container">
+				<h2 class="detail-section-title text-center">Why DTing Image Toolkit</h2>
+				<p class="detail-section-sub text-center">A complete image toolkit in your browser — private, instant, and free.</p>
+				<div class="benefits-grid">
+					<div class="benefit-card">
+						<div class="benefit-icon lightning-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+						</div>
+						<h3>Lightning Fast</h3>
+						<p>All processing happens locally in your browser using the Canvas API. No uploads, no waiting on servers — results appear in milliseconds.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon lock-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+						</div>
+						<h3>100% Private</h3>
+						<p>Your images never leave your device. We don't store, track, or transmit your files — perfect for sensitive documents and photos.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon compress-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14h6v6"></path><path d="M20 10h-6V4"></path><path d="M14 10l7-7"></path><path d="M10 14l-7 7"></path></svg>
+						</div>
+						<h3>Smart Compression</h3>
+						<p>Shrink file sizes dramatically with adjustable quality while keeping visuals crisp and near-lossless to the human eye.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon convert-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2.1l4 4-4 4"></path><path d="M3 12.2v-2a4 4 0 0 1 4-4h14"></path><path d="M7 21.9l-4-4 4-4"></path><path d="M21 11.8v2a4 4 0 0 1-4 4H3"></path></svg>
+						</div>
+						<h3>All Formats</h3>
+						<p>Convert freely between PNG, JPG, JPEG, and WebP. Resize, crop, rotate, and strip EXIF metadata in one place.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon infinity-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6a4 4 0 0 0-4 4 4 4 0 0 0-4-4 4 4 0 1 0 0 8 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 1 0 0-8z"></path></svg>
+						</div>
+						<h3>Zero Limits</h3>
+						<p>No account, no watermarks, no per-file caps beyond a generous 20MB local limit. Use it as often as you like.</p>
+					</div>
+
+					<div class="benefit-card">
+						<div class="benefit-icon device-icon">
+							<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+						</div>
+						<h3>Works Everywhere</h3>
+						<p>Fully responsive design that adapts to desktop, tablet, and mobile. Touch-friendly controls on every tool.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How to Use / Run Locally -->
+		<section class="integration-section" id="integration">
+			<div class="container integration-container glass-card">
+				<div class="integration-content">
+					<h2>Run the Image Toolkit Locally</h2>
+					<p class="integration-summary">Want to host or run the Image Toolkit on your own device? We've designed it to be fully self-contained. Follow these steps to set it up.</p>
+
+					<div class="steps-list">
+						<div class="step-item">
+							<span class="step-number">1</span>
+							<div class="step-text">
+								<h4>Clone the Repository</h4>
+								<p>Grab the source files directly from our repository system.</p>
+								<div class="code-block-wrapper">
+									<pre><code>git clone https://github.com/rifatsoftdev/IM-Toolkit-Web.git</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">2</span>
+							<div class="step-text">
+								<h4>Install Dependencies</h4>
+								<p>Navigate into the directory and install local packages using npm or yarn.</p>
+								<div class="code-block-wrapper">
+									<pre><code>cd IM-Toolkit-Web && npm install</code></pre>
+								</div>
+							</div>
+						</div>
+
+						<div class="step-item">
+							<span class="step-number">3</span>
+							<div class="step-text">
+								<h4>Boot Dev Server</h4>
+								<p>Start a local dev server and open your browser at the default port.</p>
+								<div class="code-block-wrapper">
+									<pre><code>npm run dev</code></pre>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="integration-cta">
+						<a href="https://imtoolkit.dting.online/" target="_blank" rel="noopener" class="btn btn-primary">
+							Try It Now
+							<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+						</a>
+						<a href="https://github.com/rifatsoftdev/Image_Toolkit.git" target="_blank" rel="noopener" class="btn btn-secondary">View on GitHub</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ -->
+		<section class="faq-section">
+			<div class="container faq-container">
+				<h2 class="detail-section-title text-center">Frequently Asked Questions</h2>
+				<p class="detail-section-sub text-center">Quick answers about privacy, formats, and how the toolkit works.</p>
+				<div class="faq-list">
+					<details class="faq-item glass-card">
+						<summary>Are my images uploaded to a server?</summary>
+						<div class="faq-answer">
+							<p>No. Every operation is performed directly inside your browser using the HTML5 Canvas API. Your images never leave your device, which means they can't be accessed, stored, or shared by us.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>What image formats are supported?</summary>
+						<div class="faq-answer">
+							<p>You can upload PNG, JPG, JPEG, and WebP files up to 20MB. You can also convert your images between these formats with a single click.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Is the toolkit really free to use?</summary>
+						<div class="faq-answer">
+							<p>Yes, the Image Toolkit is completely free with no account required, no watermarks, and no hidden usage limits beyond the local 20MB file size cap.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Will converting or compressing reduce quality?</summary>
+						<div class="faq-answer">
+							<p>Compression uses an adjustable quality slider (default 80%) that is visually near-lossless. You can raise or lower it depending on whether you prioritize file size or fidelity.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Can I remove private metadata from my photos?</summary>
+						<div class="faq-answer">
+							<p>Absolutely. The EXIF tool strips GPS coordinates, camera model, date taken, and other private metadata, helping you share images without leaking personal information.</p>
+						</div>
+					</details>
+
+					<details class="faq-item glass-card">
+						<summary>Why does it need a modern browser?</summary>
+						<div class="faq-answer">
+							<p>Features like the Canvas API, WebP encoding, and the before/after preview rely on modern web standards. We recommend the latest version of Chrome, Edge, Firefox, or Safari.</p>
+						</div>
+					</details>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	/* Common styles matching pocketpay.astro */
+	.service-detail-page {
+		padding-top: var(--header-height);
+		flex-grow: 1;
+	}
+
+	.breadcrumb-section {
+		padding: 2rem 0 1rem 0;
+	}
+
+	.back-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--text-secondary);
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.back-link:hover {
+		color: var(--text-primary);
+		transform: translateX(-3px);
+	}
+
+	/* Hero Detail Section */
+	.detail-hero-section {
+		padding: 2rem 0 5rem 0;
+	}
+
+	.detail-hero-container {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.detail-hero-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.detail-badge {
+		align-self: flex-start;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 1rem;
+		border-radius: 50px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		font-family: var(--font-heading);
+	}
+
+	.detail-badge.cyan {
+		background: rgba(0, 242, 254, 0.08);
+		border: 1px solid rgba(0, 242, 254, 0.2);
+		color: var(--accent-cyan);
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+	}
+
+	.cyan-dot {
+		background-color: var(--accent-cyan);
+		box-shadow: 0 0 8px var(--accent-cyan);
+	}
+
+	.pink-dot {
+		background-color: var(--accent-pink);
+		box-shadow: 0 0 8px var(--accent-pink);
+	}
+
+	.purple-dot {
+		background-color: var(--accent-purple);
+		box-shadow: 0 0 8px var(--accent-purple);
+	}
+
+	.detail-title {
+		font-size: 4rem;
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.1;
+	}
+
+	.detail-tagline {
+		color: var(--text-secondary);
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.detail-ctas {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1rem;
+		flex-wrap: wrap;
+	}
+
+	/* Image display */
+	.detail-hero-image-wrapper {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.image-frame-container {
+		width: 100%;
+		max-width: 500px;
+		border-radius: 12px;
+		padding: 6px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+	}
+
+	.preview-image {
+		border-radius: 8px;
+		width: 100%;
+		height: auto;
+		display: block;
+		object-fit: cover;
+	}
+
+	/* Promo strip */
+	.promo-strip {
+		padding: 0 0 2rem 0;
+	}
+
+	.promo-strip-inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	.promo-pill {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.55rem 1.1rem;
+		border-radius: 50px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+	}
+
+	/* Features section */
+	.detail-features-section {
+		padding: 5rem 0;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.detail-section-title {
+		font-size: 2.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.detail-section-sub {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		max-width: 640px;
+		margin: 0 auto 3.5rem auto;
+		line-height: 1.6;
+	}
+
+	.features-detail-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.feat-detail-card {
+		padding: 3rem 2.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.feat-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.compress-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.crop-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+	.convert-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+	.resize-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.rotate-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+	.exif-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+
+	.feat-detail-card h3 {
+		font-size: 1.35rem;
+		font-weight: 600;
+	}
+
+	.feat-detail-card p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Gallery */
+	.gallery-section {
+		padding: 5rem 0;
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.75rem;
+	}
+
+	.gallery-item {
+		margin: 0;
+		padding: 0.75rem;
+		overflow: hidden;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 8px;
+		border: 1px solid var(--border-color);
+	}
+
+	.gallery-item figcaption {
+		padding: 1rem 0.5rem 0.5rem 0.5rem;
+		font-size: 0.95rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+		text-align: center;
+	}
+
+	/* Benefits */
+	.benefits-section {
+		padding: 5rem 0;
+		background: rgba(255, 255, 255, 0.01);
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.benefit-card {
+		padding: 2.5rem 2rem;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.benefit-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 46px;
+		height: 46px;
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--border-color);
+	}
+
+	.lightning-icon { color: var(--accent-purple); border-color: rgba(127, 0, 255, 0.2); }
+	.lock-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+	.infinity-icon { color: var(--accent-pink); border-color: rgba(243, 85, 136, 0.2); }
+	.device-icon { color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.2); }
+
+	.benefit-card h3 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.benefit-card p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Integration / Local setup section */
+	.integration-section {
+		padding: 6rem 0 8rem 0;
+	}
+
+	.integration-container {
+		padding: 5rem 4.5rem;
+		border: 1px solid rgba(0, 242, 254, 0.15);
+	}
+
+	.integration-content {
+		max-width: 800px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.integration-content h2 {
+		font-size: 2.25rem;
+	}
+
+	.integration-summary {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+	}
+
+	.steps-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.step-item {
+		display: flex;
+		gap: 1.5rem;
+	}
+
+	.step-number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: rgba(0, 242, 254, 0.1);
+		border: 1px solid rgba(0, 242, 254, 0.3);
+		color: var(--accent-cyan);
+		font-family: var(--font-heading);
+		font-weight: bold;
+		font-size: 0.95rem;
+	}
+
+	.step-text {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		flex-grow: 1;
+		min-width: 0;
+	}
+
+	.step-text h4 {
+		font-size: 1.15rem;
+		font-weight: 600;
+	}
+
+	.step-text p {
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.integration-cta {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	/* Code Block styling */
+	.code-block-wrapper {
+		background: rgba(7, 9, 14, 0.6);
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		padding: 0.85rem 1.25rem;
+		margin-top: 0.5rem;
+		max-width: 100%;
+		overflow-x: auto;
+	}
+
+	.code-block-wrapper pre {
+		margin: 0;
+	}
+
+	.code-block-wrapper code {
+		font-family: 'Courier New', Courier, monospace;
+		color: #e2e8f0;
+		font-size: 0.9rem;
+	}
+
+	/* FAQ */
+	.faq-section {
+		padding: 5rem 0 6rem 0;
+	}
+
+	.faq-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.faq-item summary {
+		list-style: none;
+		cursor: pointer;
+		padding: 1.5rem 1.75rem;
+		font-weight: 600;
+		font-size: 1.05rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.faq-item summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.faq-item summary::after {
+		content: "+";
+		font-size: 1.5rem;
+		line-height: 1;
+		color: var(--accent-cyan);
+		flex-shrink: 0;
+		transition: transform 0.2s ease;
+	}
+
+	.faq-item[open] summary::after {
+		content: "\2212";
+	}
+
+	.faq-answer {
+		padding: 0 1.75rem 1.5rem 1.75rem;
+		color: var(--text-secondary);
+		font-size: 0.95rem;
+		line-height: 1.6;
+	}
+
+	/* Responsive Breakpoints */
+	@media (max-width: 992px) {
+		.detail-hero-container {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 3rem;
+		}
+
+		.detail-badge {
+			align-self: center;
+		}
+
+		.detail-ctas {
+			justify-content: center;
+		}
+
+		.features-detail-grid,
+		.benefits-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.gallery-grid {
+			grid-template-columns: 1fr;
+			max-width: 520px;
+			margin: 0 auto;
+		}
+
+		.integration-container {
+			padding: 4rem 2.5rem;
+		}
+
+		.faq-list {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.detail-title {
+			font-size: 3rem;
+		}
+
+		.detail-tagline {
+			font-size: 1.05rem;
+		}
+
+		.detail-section-title {
+			font-size: 1.85rem;
+		}
+	}
+
+	@media (max-width: 576px) {
+		.detail-title {
+			font-size: 2.4rem;
+		}
+
+		.features-detail-grid,
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.detail-hero-section {
+			padding: 1rem 0 3rem 0;
+		}
+
+		.detail-features-section,
+		.gallery-section,
+		.benefits-section,
+		.faq-section {
+			padding: 3.5rem 0;
+		}
+
+		.integration-section {
+			padding: 4rem 0 5rem 0;
+		}
+
+		.integration-container {
+			padding: 2.5rem 1.5rem;
+		}
+
+		.step-item {
+			gap: 1rem;
+		}
+
+		.promo-strip-inner {
+			gap: 0.6rem;
+		}
+
+		.promo-pill {
+			font-size: 0.8rem;
+			padding: 0.45rem 0.9rem;
+		}
+
+		.faq-item summary {
+			padding: 1.25rem 1.25rem;
+			font-size: 1rem;
+		}
+
+		.faq-answer {
+			padding: 0 1.25rem 1.25rem 1.25rem;
+		}
+	}
+</style>

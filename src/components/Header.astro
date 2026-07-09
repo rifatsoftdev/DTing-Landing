@@ -18,11 +18,54 @@
 			</ul>
 		</nav>
 
-		<!-- Desktop CTA -->
+		<!-- Desktop CTA / Profile -->
 		<div class="header-actions">
-			<a href="https://auth.dting.online/login" class="btn btn-outline-glow btn-sm" target="_blank" rel="noopener noreferrer">
-				Launch
-			</a>
+			<!-- Guest State -->
+			<div id="auth-guest" class="auth-state">
+				<a href="https://auth.dting.online/login" class="btn btn-outline-glow btn-sm" target="_blank" rel="noopener noreferrer">
+					Launch
+				</a>
+			</div>
+
+			<!-- User State -->
+			<div id="auth-user" class="auth-state" style="display: none;">
+				<div class="profile-dropdown" id="profile-dropdown">
+					<button class="profile-trigger" id="profile-trigger" aria-label="User menu">
+						<img id="user-avatar" src="" alt="" class="avatar">
+						<div class="user-info">
+							<span id="user-display-name" class="display-name"></span>
+							<span id="user-username" class="username"></span>
+						</div>
+						<span class="notification-badge" id="notification-badge" style="display: none;"></span>
+						<svg class="chevron" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+					</button>
+					
+					<div class="dropdown-menu" id="dropdown-menu">
+						<a href="/profile" class="dropdown-item">
+							<span>👤</span> Profile
+						</a>
+						<a href="/settings" class="dropdown-item">
+							<span>⚙</span> Settings
+						</a>
+						<a href="/notifications" class="dropdown-item">
+							<span>🔔</span> Notifications <span class="count" id="notification-count"></span>
+						</a>
+						<a href="/billing" class="dropdown-item">
+							<span>💳</span> Billing
+						</a>
+						<a href="/help" class="dropdown-item">
+							<span>❓</span> Help
+						</a>
+						<div class="dropdown-divider"></div>
+						<button class="dropdown-item signout" id="signout-btn">
+							<span>🚪</span> Sign out
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<!-- Mobile Hamburger -->
 			<button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
 				<span class="bar bar-1"></span>
@@ -35,15 +78,37 @@
 	<!-- Mobile Menu Overlay -->
 	<div class="mobile-menu" id="mobile-menu">
 		<nav class="mobile-nav">
+			<!-- Mobile User Profile -->
+			<div id="mobile-user" class="mobile-user-profile" style="display: none;">
+				<img id="mobile-user-avatar" src="" alt="" class="avatar-lg">
+				<div class="mobile-user-info">
+					<span id="mobile-user-display-name" class="display-name"></span>
+					<span id="mobile-user-username" class="username"></span>
+				</div>
+			</div>
+
 			<ul class="mobile-links">
 				<li><a href="/#about" class="mobile-link">About</a></li>
 				<li><a href="/#services" class="mobile-link">Services</a></li>
 				<li><a href="/#features" class="mobile-link">Features</a></li>
 				<li><a href="/#contact" class="mobile-link">Contact</a></li>
 			</ul>
-			<div class="mobile-actions">
+
+			<!-- Mobile User Menu -->
+			<div id="mobile-user-menu" class="mobile-user-menu" style="display: none;">
+				<a href="/profile" class="mobile-menu-item">👤 Profile</a>
+				<a href="/settings" class="mobile-menu-item">⚙ Settings</a>
+				<a href="/notifications" class="mobile-menu-item">
+					🔔 Notifications <span class="count" id="mobile-notification-count"></span>
+				</a>
+				<a href="/billing" class="mobile-menu-item">💳 Billing</a>
+				<a href="/help" class="mobile-menu-item">❓ Help</a>
+				<button class="mobile-menu-item signout" id="mobile-signout-btn">🚪 Sign out</button>
+			</div>
+
+			<div class="mobile-actions" id="mobile-guest-actions">
 				<a href="https://auth.dting.online/login" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-					Launch Console
+					Launch
 				</a>
 			</div>
 		</nav>
@@ -51,10 +116,21 @@
 </header>
 
 <script>
+	import { apiClient } from '../script/ApiClient.js';
+
+
 	const header = document.getElementById('main-header');
 	const mobileToggle = document.getElementById('mobile-toggle');
 	const mobileMenu = document.getElementById('mobile-menu');
 	const mobileLinks = document.querySelectorAll('.mobile-link');
+	
+	// Auth elements
+	const authGuest = document.getElementById('auth-guest');
+	const authUser = document.getElementById('auth-user');
+	const profileTrigger = document.getElementById('profile-trigger');
+	const dropdownMenu = document.getElementById('dropdown-menu');
+	const signoutBtn = document.getElementById('signout-btn');
+	const mobileSignoutBtn = document.getElementById('mobile-signout-btn');
 
 	// Scroll effect for header
 	window.addEventListener('scroll', () => {
@@ -82,9 +158,70 @@
 			}
 		});
 	});
+
+	// Profile dropdown toggle
+	profileTrigger?.addEventListener('click', (e) => {
+		e.stopPropagation();
+		dropdownMenu?.classList.toggle('active');
+		profileTrigger?.classList.toggle('active');
+	});
+
+	// Close dropdown when clicking outside
+	document.addEventListener('click', (e) => {
+		if (!e.target.closest('.profile-dropdown')) {
+			dropdownMenu?.classList.remove('active');
+			profileTrigger?.classList.remove('active');
+		}
+	});
+
+	
+	// Check auth state and update UI
+	
+	try {
+		const response = await apiClient.get('/me/header');
+		const user = response?.data?.header_data || response || {};
+
+		if (!user?.full_name) {
+			throw new Error('No authenticated user');
+		}
+
+		// Desktop UI update
+		document.getElementById('user-avatar').src = user.avatar_url || '';
+		document.getElementById('user-avatar').alt = user.full_name;
+		document.getElementById('user-display-name').textContent = user.full_name;
+		document.getElementById('user-username').textContent = '@' + user.username;
+		
+		const notificationCount = Number(user.notification_count || 0);
+		if (notificationCount > 0) {
+			document.getElementById('notification-badge').textContent = notificationCount;
+			document.getElementById('notification-badge').style.display = 'flex';
+			document.getElementById('notification-count').textContent = `(${notificationCount})`;
+		}
+
+		// Mobile UI update
+		document.getElementById('mobile-user-avatar').src = user.avatar_url || '';
+		document.getElementById('mobile-user-display-name').textContent = user.full_name;
+		document.getElementById('mobile-user-username').textContent = '@' + user.username;
+		if (notificationCount > 0) {
+			document.getElementById('mobile-notification-count').textContent = `(${notificationCount})`;
+		}
+
+		// Show user state, hide guest
+		authGuest.style.display = 'none';
+		authUser.style.display = 'block';
+		document.getElementById('mobile-user').style.display = 'flex';
+		document.getElementById('mobile-user-menu').style.display = 'flex';
+		document.getElementById('mobile-guest-actions').style.display = 'none';
+
+	} catch (err) {
+		// User not logged in - guest state remains visible
+		console.log(err);
+	}
+	
 </script>
 
 <style>
+	/* আগের সব স্টাইল একই থাকবে, সাথে নিচের নতুন স্টাইল যোগ করো */
 	.header {
 		position: fixed;
 		top: 0;
@@ -293,6 +430,239 @@
 		
 		.header-actions .btn-outline-glow {
 			display: none;
+		}
+	}
+
+	.auth-state {
+		display: flex;
+		align-items: center;
+	}
+
+	/* Profile Dropdown */
+	.profile-dropdown {
+		position: relative;
+	}
+
+	.profile-trigger {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.4rem 0.75rem 0.4rem 0.4rem;
+		background: var(--surface-2, rgba(255,255,255,0.05));
+		border: 1px solid var(--border-color);
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		position: relative;
+	}
+
+	.profile-trigger:hover {
+		background: var(--surface-3, rgba(255,255,255,0.08));
+		border-color: var(--primary, #6366f1);
+	}
+
+	.profile-trigger.active .chevron {
+		transform: rotate(180deg);
+	}
+
+	.avatar {
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 2px solid var(--border-color);
+	}
+
+	.avatar-lg {
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 2px solid var(--border-color);
+	}
+
+	.user-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+	}
+
+	.display-name {
+		font-family: var(--font-heading);
+		font-size: 0.875rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		line-height: 1.2;
+	}
+
+	.username {
+		font-size: 0.75rem;
+		color: var(--text-secondary);
+		line-height: 1.2;
+	}
+
+	.chevron {
+		transition: transform 0.2s ease;
+		color: var(--text-secondary);
+	}
+
+	.notification-badge {
+		position: absolute;
+		top: -2px;
+		right: 28px;
+		background: #ef4444;
+		color: white;
+		font-size: 0.65rem;
+		font-weight: 700;
+		min-width: 18px;
+		height: 18px;
+		border-radius: 9px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 5px;
+		border: 2px solid var(--bg-primary, #07090e);
+	}
+
+	/* Dropdown Menu */
+	.dropdown-menu {
+		position: absolute;
+		top: calc(100% + 0.5rem);
+		right: 0;
+		min-width: 240px;
+		background: var(--surface-1, #0f1117);
+		border: 1px solid var(--border-color);
+		border-radius: 12px;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		padding: 0.5rem;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-10px);
+		transition: all 0.2s ease;
+		z-index: 200;
+	}
+
+	.dropdown-menu.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.dropdown-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.65rem 0.875rem;
+		border-radius: 8px;
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		transition: all 0.15s ease;
+		cursor: pointer;
+		border: none;
+		background: none;
+		width: 100%;
+		text-align: left;
+	}
+
+	.dropdown-item:hover {
+		background: var(--surface-2, rgba(255,255,255,0.05));
+		color: var(--text-primary);
+	}
+
+	.dropdown-item span:first-child {
+		font-size: 1.1rem;
+	}
+
+	.dropdown-item .count {
+		margin-left: auto;
+		font-size: 0.8rem;
+		color: var(--primary, #6366f1);
+		font-weight: 600;
+	}
+
+	.dropdown-divider {
+		height: 1px;
+		background: var(--border-color);
+		margin: 0.5rem 0;
+	}
+
+	.dropdown-item.signout {
+		color: #ef4444;
+	}
+
+	.dropdown-item.signout:hover {
+		background: rgba(239, 68, 68, 0.1);
+	}
+
+	/* Mobile User Profile */
+	.mobile-user-profile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.5rem;
+		border-bottom: 1px solid var(--border-color);
+		width: 100%;
+	}
+
+	.mobile-user-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.25rem;
+	}
+
+	.mobile-user-menu {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		width: 100%;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	.mobile-menu-item {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 0.875rem 1.5rem;
+		font-size: 1rem;
+		color: var(--text-secondary);
+		transition: all 0.15s ease;
+		border: none;
+		background: none;
+		width: 100%;
+		text-align: left;
+	}
+
+	.mobile-menu-item:hover {
+		background: var(--surface-2, rgba(255,255,255,0.05));
+		color: var(--text-primary);
+	}
+
+	.mobile-menu-item.signout {
+		color: #ef4444;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.profile-trigger .user-info {
+			display: none;
+		}
+		
+		.profile-trigger {
+			padding: 0.4rem;
+		}
+
+		.notification-badge {
+			right: -2px;
+		}
+
+		.dropdown-menu {
+			right: -1rem;
 		}
 	}
 </style>
